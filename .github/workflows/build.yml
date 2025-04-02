@@ -14,19 +14,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4 
 
-      - name: Install Times New Roman
+      - name: Install stuffs
         run: |
-          sudo apt-get install -y ttf-mscorefonts-installer  # Installs Microsoft Core Fonts (includes Times New Roman)
+          sudo apt-get install -y ttf-mscorefonts-installer texlive-full  # Installs Microsoft Core Fonts (includes Times New Roman)
           sudo fc-cache -f -v       
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: main.tex
-          latexmk_use_xelatex: true
-      
-      - name: Rename compiled file
-        run: mv main.pdf final-report.pdf
+        run: |
+          xelatex main.tex
+          mv main.pdf final-report.pdf
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
