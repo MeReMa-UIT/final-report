@@ -1,0 +1,72 @@
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{fontspec}
+\usepackage{float}
+\usepackage[a4paper, left=3cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{tikz}
+\usepackage{enumitem}
+%\usepackage[utf8]{inputenc}
+% \usepackage{vntex}
+
+\usetikzlibrary{shapes, arrows}
+
+\setmainfont{Times New Roman}
+\setcounter{secnumdepth}{3}
+
+\hypersetup{
+    pdftitle = {Quản lý bệnh án bệnh nhân},
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\renewcommand{\contentsname}{Mục lục}
+\renewcommand{\chaptername}{Chương}
+
+
+\newenvironment{centerpage}
+    {\begin{adjustwidth}{-3cm}{-1.5cm}
+     \begin{center}}
+    {\end{center}
+    \end{adjustwidth}}
+
+\newenvironment{datades}
+    {\begin{enumerate}[label=\textbf{D\arabic*}:]}
+    {\end{enumerate}}
+    
+\newenvironment{algodes}
+    {\begin{enumerate}[label=\textbf{Bước \arabic*}:, leftmargin=1.6cm]}
+    {\end{enumerate}}
+
+\newcommand{\dfd}[7]{
+    \begin{centerpage}
+        \begin{tikzpicture}
+            \node[draw, align=center, minimum width=3cm, minimum height=1cm] (A) at (-7,0) {\textbf{Thiết bị nhập}};       
+            \node[draw, align=center, minimum width=3cm, minimum height=1cm] (B) at (7,0) {\textbf{Thiết bị xuất}};       
+            \node[draw, align=center, minimum width=4cm, minimum height=1cm] (C) at (0,3) {\textbf{Người dùng}};       
+            \node[draw=none, minimum width=4cm, minimum height=1cm] (D) at (0,-3) {Bộ nhớ phụ};
+            \draw (D.north west) -- (D.north east); 
+            \draw (D.south west) -- (D.south east);            
+
+            \node[draw, shape=ellipse, align=center, minimum width=7.5cm, minimum height=2cm] (E) at (0,0) {\textbf{#7}};        
+
+            \draw[->, very thick, #1] (C.-163) -- (E.151) node[midway,left] () {\textbf{D1}};
+            \draw[->, very thick, #2] (A.east) -- (E.west) node[midway,above] () {\textbf{D2}};            
+            \draw[->, very thick, #3] (D.163) -- (E.-151) node[midway,left] () {\textbf{D3}};
+            \draw[->, very thick, #4] (E.-29) -- (D.17) node[midway,right] () {\textbf{D4}};
+            \draw[->, very thick, #5] (E.east) -- (B.west) node[midway,above] () {\textbf{D5}}; 
+            \draw[->, very thick, #6] (E.29) -- (C.-17) node[midway,right] () {\textbf{D6}};
+
+        \end{tikzpicture}
+    \end{centerpage}
+}

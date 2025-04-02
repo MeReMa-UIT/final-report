@@ -1,0 +1,11 @@
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+*.fls
+*.fdb_latexmk
+*.gz
+.direnv/
+*.xdv
+.fuse_hidden*
