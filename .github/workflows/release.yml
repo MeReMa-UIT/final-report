@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4 
   
       - name: Rename file
+        if: ${{ steps.release.outputs.release_created }}
         run: mv ./build/main.pdf ./report.pdf
 
       - name: Upload Release Artifact
