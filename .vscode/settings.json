@@ -9,5 +9,6 @@
             ],
             "env": {}
         },
-    ]
+    ],
+    "latex-workshop.latex.outDir": "../build",
 }
