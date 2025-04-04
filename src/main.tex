@@ -1,11 +1,11 @@
 \documentclass[12pt]{report}
-\input{preamble.tex}
+\input{src/preamble.tex}
 
 \begin{document}
     
 \begin{titlepage}      
     \begin{center}
-        \includegraphics[width=7cm]{figures/uit.png}\\[2cm]
+        \includegraphics[width=7cm]{src/figures/uit.png}\\[2cm]
         {\LARGE TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN\\[0.5cm]
         KHOA KHOA HỌC MÁY TÍNH}\\
 
@@ -37,8 +37,10 @@
 \newpage
 \tableofcontents
 
-\include{chapters/1/main.tex}
-\include{chapters/2/main.tex}
-\include{chapters/3/main.tex}
+\input{src/chapters/1/main.tex}
+\newpage
+\input{src/chapters/2/main.tex}
+\newpage
+\input{src/chapters/3/main.tex}
 
 \end{document}
