@@ -1,0 +1,14 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "sh",
+            "args": [
+                "-c",
+                "cd ../ && make"
+            ],
+            "env": {}
+        },
+    ],
+    "latex-workshop.latex.outDir": "../build",
+}

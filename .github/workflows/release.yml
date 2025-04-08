@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Release to Github?
+        required: false
+        default: true
+        type: boolean
+      prerelease:
+        description: Make it pre-release?
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    name: Bump version
+    if: ${{ inputs.release }}
+    outputs:
+      NEW_VERSION: ${{ steps.git-cliff.outputs.version }}
+      RELEASE_NOTES: ${{ steps.git-cliff.outputs.content }} 
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: fregante/setup-git-user@v2
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v4
+        id: git-cliff
+        with:
+          config: cliff.toml
+          args: --bump --unreleased
+      
+      - name: Create new tag
+        run: |
+          git tag -a ${{ steps.git-cliff.outputs.version }} -m "Release ${{ steps.git-cliff.outputs.version }}"
+          git push origin ${{ steps.git-cliff.outputs.version }}
+
+
+
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    needs:
+      - bump-version
+    if: needs.bump-version.result == 'success'
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Rename files
+        run: |
+          mv ./build/main.pdf ./report.pdf
+
+
+      - name: Release
+        env:
+          cool: true
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.bump-version.outputs.NEW_VERSION }}
+          files: ./report.pdf
+          body: ${{ needs.bump-version.outputs.RELEASE_NOTES }}
+          make_latest: ${{ ! inputs.prerelease && github.ref != 'refs/heads/main' }}
+          prerelease: ${{ github.ref != 'refs/heads/main' || inputs.prerelease }}
