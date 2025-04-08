@@ -9,6 +9,4 @@
 .fuse_hidden*
 
 .direnv/
-build/** 
-
-!build/main.pdf
+build/
