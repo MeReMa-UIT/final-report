@@ -1,0 +1,155 @@
+\section{Quản lí bệnh nhân}
+
+Nhóm tính năng Quản lí bệnh nhân là một phần cốt lõi trong hệ thống "Quản lí bệnh án bệnh nhân", cho phép các nhân viên y tế và quản trị viên thực hiện các thao tác liên quan đến việc quản lí thông tin của bệnh nhân. Nhóm tính năng này hỗ trợ đầy đủ các thao tác cơ bản như:
+\begin{itemize}
+    \item Thêm bệnh nhân
+    \item Cập nhật thông tin bệnh nhân
+    \item Tra cứu thông tin bệnh nhân
+    \item Xóa bệnh nhân
+\end{itemize}
+
+Các tính năng trong nhóm này giúp đảm bảo rằng thông tin bệnh nhân luôn được lưu trữ đầy đủ, chính xác và cập nhật kịp thời, phục vụ cho quá trình thăm khám, chẩn đoán, điều trị và theo dõi sức khỏe. Việc quản lí chặt chẽ thông tin bệnh nhân cũng góp phần nâng cao hiệu quả vận hành của bệnh viện và giảm thiểu các sai sót y tế liên quan đến dữ liệu.
+
+\subsection{Thêm bệnh nhân}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép nhân viên tiếp chính tiếp tục thêm những thông tin hành chính của bệnh nhân vào hệ thống ứng với tài khoản đã được tạo của bệnh nhân khi họ đến khám chữa bệnh lần đầu; sau đó thêm họ vào danh sách bệnh nhân. Việc này giúp tạo ra một hồ sơ bệnh nhân đầy đủ và chính xác, phục vụ cho các hoạt động khám chữa bệnh và quản lí bệnh án sau này. 
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Bệnh nhân đến bệnh viện để khám chữa bệnh lần đầu
+\item Nhân viên tiếp nhận sẽ thu thập thông tin hành chính của bệnh nhân 
+\item Nhân viên gửi yêu cầu tạo tài khoản bệnh nhân mới cho quản trị viên nếu là bệnh nhân mới.
+\item Nếu quản trị viên chấp nhận, hệ thống sẽ tự động tạo tài khoản cho bệnh nhân và gửi thông báo đến nhân viên tiếp nhận
+\item Nhân viên tiếp nhận sẽ nhập các thông tin hành chính của bệnh nhân vào hệ thống ứng với tài khoản bệnh nhân đã được tạo
+\item Hệ thống sẽ kiểm tra tính hợp lệ của các thông tin đã nhập
+\item Nếu thông tin hợp lệ, hệ thống sẽ tự động sinh mã số bệnh nhân duy nhất và lưu trữ thông tin vào cơ sở dữ liệu
+\item Nếu thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhân viên tiếp nhận nhập lại
+\item Sau khi lưu thành công, thông tin bệnh nhân được lưu trữ và phục vụ cho các chức năng liên quan đến khám chữa bệnh và quản lí bệnh án
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cho phép nhập đầy đủ thông tin hành chính của bệnh nhân.
+
+\item \textbf{REQ\_03} Hệ thống phải tự động sinh mã số bệnh nhân duy nhất cho mỗi bệnh nhân mới được thêm vào.
+
+\item \textbf{REQ\_04} Hệ thống phải kiểm tra các trường bắt buộc và từ chối lưu nếu thiếu thông tin cần thiết.
+
+\item \textbf{REQ\_05} Hệ thống phải lưu trữ thông tin bệnh nhân liên kết với tài khoản người dùng tương ứng để bệnh nhân có thể đăng nhập hệ thống và theo dõi hồ sơ của mình.
+
+\end{itemize}
+
+\subsection{Cập nhật thông tin bệnh nhân}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép nhân viên y tế hoặc nhân viên tiếp nhận sửa, cập nhật thông tin hành chính hoặc thông tin y tế ban đầu của bệnh nhân khi có thay đổi hoặc phát hiện sai sót, đảm bảo tính chính xác và đầy đủ của hồ sơ bệnh nhân trong hệ thống.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Trong quá trình tiếp nhận hoặc khám chữa bệnh, bệnh nhân hoặc nhân viên phát hiện thông tin bệnh nhân bị thiếu, sai hoặc thay đổi (ví dụ: đổi địa chỉ, cập nhật nhóm máu, bổ sung thông tin bảo hiểm)
+
+\item Nhân viên truy cập chức năng cập nhật thông tin bệnh nhân trên hệ thống
+
+\item Nhân viên thực hiện chỉnh sửa thông tin cần thiết và lưu lại
+
+\item Hệ thống xác nhận việc cập nhật và ghi nhận lịch sử thay đổi (nếu có cơ chế lưu vết)
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cho phép chỉnh sửa các trường thông tin hành chính bao gồm địa chỉ, BHYT, v.v.
+
+\item \textbf{REQ\_02} Hệ thống phải xác thực người thực hiện cập nhật có quyền phù hợp để sửa thông tin.
+
+\item \textbf{REQ\_03} Hệ thống phải lưu thay đổi vào cơ sở dữ liệu và cập nhật thông tin bệnh nhân tương ứng.
+
+\item \textbf{REQ\_04} Hệ thống phải hiển thị thông báo xác nhận sau khi cập nhật thành công, hoặc thông báo lỗi nếu có vấn đề xảy ra.
+
+\end{itemize}
+
+\subsection{Tra cứu thông tin bệnh nhân}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép nhân viên y tế, nhân viên tiếp nhận tra cứu nhanh chóng thông tin bệnh nhân bao gồm thông tin hành chính đã được lưu trong hệ thống, hỗ trợ quá trình tiếp nhận, thăm khám và quản lý bệnh nhân.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Nhân viên cần truy xuất thông tin của bệnh nhân để phục vụ cho việc tiếp nhận, khám chữa bệnh hoặc quản lý dữ liệu
+
+\item Nhân viên sử dụng công cụ tìm kiếm để nhập từ khóa liên quan đến bệnh nhân (mã bệnh nhân, họ tên, số CCCD, số điện thoại,...)
+
+\item Hệ thống hiển thị danh sách bệnh nhân phù hợp với tiêu chí tìm kiếm
+
+\item Nhân viên chọn bệnh nhân cần tra cứu để xem thông tin chi tiết
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cho phép người dùng tìm kiếm bệnh nhân theo nhiều tiêu chí cả trong thông tin hành chính của bệnh nhân và thông tin tài khoản của bệnh như mã số bệnh nhân, họ tên, số CCCD, số điện thoại, email, giới tính, ngày sinh.
+
+\item \textbf{REQ\_02} Hệ thống phải hiển thị danh sách bệnh nhân phù hợp với từ khóa và tiêu chí tìm kiếm.
+
+\item \textbf{REQ\_03} Hệ thống phải cho phép xem chi tiết hồ sơ hành chính của bệnh nhân.
+
+\item \textbf{REQ\_04} Hệ thống phải đảm bảo người tra cứu có quyền truy cập phù hợp để xem thông tin bệnh nhân.
+
+\item \textbf{REQ\_05} Hệ thống phải hỗ trợ phân trang hoặc cuộn danh sách nếu kết quả tìm kiếm quá nhiều.
+
+\end{itemize}
+
+\subsection{Xóa bệnh nhân}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép tự động thực hiện thao tác xóa bệnh nhân ra khỏi hệ thống khi bệnh nhân không còn liên quan đến cơ sở dữ liệu hiện tại (các bệnh án của họ đã hết hạn lưu trữ), đảm bảo dữ liệu trong hệ thống luôn được cập nhật và chính xác.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Hệ thống kiểm tra thời gian lưu trữ dữ liệu của các bệnh án của bệnh nhân
+
+\item Nếu không còn bệnh án nào còn thời hạn lưu trữ, hệ thống sẽ tự động gửi thông báo đến quản trị viên về việc xóa bệnh nhân
+
+\item Quản trị viên xác nhận việc xóa bệnh nhân
+
+\item Hệ thống thực hiện thao tác xóa bệnh nhân khỏi cơ sở dữ liệu
+
+\item Hệ thống cập nhật lại danh sách bệnh nhân và thông báo cho quản trị viên về việc xóa thành công
+
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+    
+\item \textbf{REQ\_01} Hệ thống phải kiểm tra rằng bệnh nhân không còn liên kết với bất kỳ bệnh án nào còn hạn lưu trữ trước khi yêu cầu xóa.
+
+\item \textbf{REQ\_02} Hệ thống phải yêu cầu quản trị viên xác nhận trước khi thực hiện xóa.
+
+\item \textbf{REQ\_03} Hệ thống phải cập nhật lại dữ liệu sau khi xóa và loại bỏ thông tin bệnh nhân khỏi danh sách tìm kiếm.
+
+\item \textbf{REQ\_04} Hệ thống có thể ghi lại nhật ký thao tác xóa bệnh nhân để phục vụ việc kiểm tra sau này.
+
+\end{itemize}
+
