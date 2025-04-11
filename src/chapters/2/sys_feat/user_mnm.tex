@@ -1,10 +1,10 @@
 \section{Quản lí người dùng hệ thống}
 
-Nhóm chức năng "Quản lí người dùng hệ thống" đóng vai trò quan trọng trong việc đảm bảo hoạt động của hệ thống được vận hành hiệu quả và an toàn. Thông qua nhóm chức năng này, quản trị viên có thể kiểm soát việc tạo mới, cập nhật, phân quyền, tra cứu và xóa người dùng trong hệ thống, từ đó đảm bảo mỗi cá nhân có quyền truy cập đúng với vai trò và trách nhiệm của mình.
+Nhóm tính năng "Quản lí người dùng hệ thống" đóng vai trò quan trọng trong việc đảm bảo hoạt động của hệ thống được vận hành hiệu quả và an toàn. Thông qua nhóm tính năng này, quản trị viên có thể kiểm soát việc tạo mới, cập nhật, phân quyền, tra cứu và xóa người dùng trong hệ thống, từ đó đảm bảo mỗi cá nhân có quyền truy cập đúng với vai trò và trách nhiệm của mình.
 
-Nhóm chức năng này đặc biệt quan trọng trong môi trường bệnh viện, nơi có sự tham gia của nhiều bộ phận như bác sĩ, y tá, điều dưỡng, nhân viên tiếp nhận, và cán bộ quản lí. Việc quản lí chặt chẽ người dùng sẽ giúp ngăn ngừa truy cập trái phép, giảm thiểu sai sót trong xử lý bệnh án và tăng cường bảo mật thông tin bệnh nhân.
+Nhóm tính năng này đặc biệt quan trọng trong môi trường bệnh viện, nơi có sự tham gia của nhiều bộ phận như bác sĩ, y tá, điều dưỡng, nhân viên tiếp nhận, và cán bộ quản lí. Việc quản lí chặt chẽ người dùng sẽ giúp ngăn ngừa truy cập trái phép, giảm thiểu sai sót trong xử lý bệnh án và tăng cường bảo mật thông tin bệnh nhân.
 
-Nhóm chức năng bao gồm các tính năng cụ thể như:
+Nhóm tính năng bao gồm các tính năng cụ thể như:
 
 \begin{itemize}
     \item Thêm người dùng mới
@@ -14,7 +14,7 @@ Nhóm chức năng bao gồm các tính năng cụ thể như:
     \item Xóa người dùng 
 \end{itemize}
 
-Thông qua các chức năng này, hệ thống đảm bảo người dùng luôn được quản lí tập trung, linh hoạt và phù hợp với nhu cầu thực tiễn của bệnh viện.
+Thông qua các tính năng này, hệ thống đảm bảo người dùng luôn được quản lí tập trung, linh hoạt và phù hợp với nhu cầu thực tiễn của bệnh viện.
 
 \subsection{Thêm người dùng mới} 
 
@@ -29,21 +29,21 @@ Tính năng này cho phép quản trị viên hệ thống thêm người dùng 
         \begin{itemize}
             \item Bệnh nhân đến bệnh viện
             \item Bệnh nhân sẽ đến quầy tiếp nhận để đăng kí khám bệnh
-            \item Nhân viên sẽ thu thập thông tin cá nhân của bệnh nhân và lí do khám bệnh
+            \item Nhân viên sẽ thu thập thông tin cá nhân cơ bản (họ tên, ngày sinh, số CCCD, giới tính, số điện thoại, email) của bệnh nhân và lí do khám bệnh
             \item Nếu bệnh nhân đã từng khám ở bệnh viện và đã được cấp tài khoản thì không cần tạo tài khoản mới
-            \item Thông tin cá nhân của bệnh nhân sẽ được nhập vào hệ thống, nhân viên tiếp nhận sẽ gửi yêu cầu tạo tài khoản bệnh nhân đến bộ phận quản trị hệ thống
+            \item Nhân viên tiếp nhận sẽ gửi yêu cầu tạo tài khoản bệnh nhân đến bộ phận quản trị hệ thống
             \item Quản trị hệ thống sẽ xem xét yêu cầu tạo tài khoản bệnh nhân
-            \item Nếu quản trị hệ thống chấp nhận yêu cầu, hệ thống sẽ xử lí và cấp cho bệnh nhân mã số và một tài khoản bao gồm tên đăng nhập và mật khẩu để truy cập vào hệ thống và theo dõi thông tin bệnh án của mình
-            \item Nhân viên tiếp nhận sẽ in thông tin tài khoản kèm mã số bệnh nhân và đưa cho bệnh nhân
+            \item Nếu quản trị hệ thống chấp nhận yêu cầu, hệ thống sẽ xử lí và cấp cho bệnh nhân một tài khoản bao gồm tên đăng nhập và mật khẩu để truy cập vào hệ thống và theo dõi thông tin bệnh án của mình
+            \item Nhân viên tiếp nhận sẽ in thông tin tài khoản và đưa cho bệnh nhân
         \end{itemize} 
     \item Đối với nhân viên của bệnh viện:
         \begin{itemize}
             \item Nhân viên gửi hồ sơ tuyền dụng đến bệnh viện, sau đó bộ phận nhân sự sẽ xem xét và phỏng vấn. Nếu là nhân viên cũ thì không cần bước này.
-            \item Nếu nhân viên được tuyển dụng và kí hợp đồng thì bộ phận nhân sự sẽ thu thập thông tin cá nhân của nhân viên và nhập vào hệ thống. Nếu là nhân viên cũ thì không cần bước này.
+            \item Nếu nhân viên được tuyển dụng và kí hợp đồng thì bộ phận nhân sự sẽ thu thập thông tin cá nhân cơ bản của nhân viên. Nếu là nhân viên cũ thì không cần bước này.
             \item Với một số nhân viên nhất định (bác sĩ, điều dưỡng, ...), những người cần thiết để có thể thực hiện các chức năng của hệ thống thì bộ phận nhân sự sẽ gửi yêu cầu tạo tài khoản đến bộ phận quản trị hệ thống
             \item Quản trị hệ thống sẽ xem xét yêu cầu tạo tài khoản nhân viên
             \item Nếu quản trị hệ thống chấp nhận yêu cầu, hệ thống sẽ xử lí và cấp cho nhân viên mã số và một tài khoản bao gồm tên đăng nhập và mật khẩu để truy cập vào hệ thống
-            \item Bộ phận nhân sự sẽ in thông tin tài khoản và mã số nhân viên và đưa cho nhân viên
+            \item Bộ phận nhân sự sẽ in thông tin tài khoản và đưa cho nhân viên
         \end{itemize}
 \end{itemize}
 
@@ -51,9 +51,9 @@ Tính năng này cho phép quản trị viên hệ thống thêm người dùng 
 \noindent \textbf{Các yêu cầu chức năng}
 
 \begin{itemize}
-    \item \textbf{REQ\_01} Hệ thống phải tạo được mã số và tài khoản người dùng mới bằng thông tin cá nhân của người dùng đã được cung cấp.
-    \item \textbf{REQ\_02} Hệ thống phải kiểm tra tính hợp lệ của các trường bắt buộc bao gồm họ tên, ngày sinh, giới tính, số điện thoại và vai trò.
-    \item \textbf{REQ\_03} Hệ thống phải tự động sinh tên đăng nhập theo quy tắc (ví dụ: dùng mã số nhân viên/bệnh nhân).
+    \item \textbf{REQ\_01} Hệ thống phải tạo được tài khoản người dùng mới bằng thông tin cá nhân của người dùng đã được cung cấp.
+    \item \textbf{REQ\_02} Hệ thống phải kiểm tra tính hợp lệ của các trường bắt buộc bao gồm họ tên, ngày sinh, số CCCD, giới tính và vai trò.
+    \item \textbf{REQ\_03} Hệ thống phải tự động sinh tên đăng nhập theo quy tắc (ví dụ: dùng mã số nhân viên/bệnh nhân, dùng số CCCD, số điện thoại, email, ...).
     \item \textbf{REQ\_04} Hệ thống phải tự động sinh mật khẩu mặc định theo quy tắc hoặc ngẫu nhiên.
     \item \textbf{REQ\_05} Hệ thống phải lưu trữ thông tin đăng nhập sử dụng cơ chế mã hóa băm.
     \item \textbf{REQ\_06} Hệ thống phải từ chối tạo tài khoản nếu tên đăng nhập đã tồn tại.
@@ -89,16 +89,16 @@ Tính năng này cho phép quản trị viên hệ thống gán quyền truy c�
     \item \textbf{REQ\_05} Hệ thống phải cập nhật ngay quyền của người dùng sau khi phân quyền thành công.
 \end{itemize}
 
-\subsection{Cập nhật thông tin người dùng}
+\subsection{Cập nhật thông tin tài khoản người dùng}
 
 \noindent \textbf{Giới thiệu tính năng}
 
-Tính năng này cho phép quản trị viên hệ thống chỉnh sửa, cập nhật thông tin cá nhân và thông tin hệ thống của người dùng đã được thêm vào hệ thống trước đó (bao gồm nhân viên và bệnh nhân), đảm bảo dữ liệu luôn chính xác, đầy đủ và kịp thời.
+Tính năng này cho phép quản trị viên hệ thống chỉnh sửa, cập nhật thông tin cá nhân và thông tin hệ thống của người dùng đã được thêm vào hệ thống trước đó (bao gồm nhân viên và bệnh nhân), đảm bảo dữ liệu luôn chính xác,đầy đủ và kịp thời.
 
 \noindent \textbf{Quy trình}
 
 \begin{itemize} 
-    \item Khi có sự thay đổi hoặc sai sót trong thông tin cá nhân quan trọng và cần xác thực (họ tên, số CCCD, số BHYT, phân quyền, ...), bệnh nhân hay nhân viên sẽ thông báo cho bộ phận phụ trách (nhân sự đối với nhân viên, hoặc quầy tiếp nhận đối với bệnh nhân) để yêu cầu cập nhật thông tin  
+    \item Khi có sự thay đổi hoặc sai sót trong thông tin cá nhân quan trọng (họ tên, ngày sinh, giới tính, số CCCD, số điện thoại, email) hoặc có yêu cầu cấp lại mật khẩu mặc định mới (do đánh mất mật khẩu cũ và không thể thay đổi mật khẩu do một số lí do nào đó), bệnh nhân hay nhân viên sẽ thông báo cho bộ phận phụ trách (nhân sự đối với nhân viên, hoặc quầy tiếp nhận đối với bệnh nhân) để yêu cầu cập nhật thông tin  
     \item Bộ phận phụ trách sẽ kiểm tra, xác minh yêu cầu và chuyển tiếp thông tin đến quản trị viên hệ thống 
     \item Quản trị viên hệ xem xét yêu cầu cập nhật thông tin người dùng 
     \item Nếu yêu cầu hợp lệ, quản trị viên sẽ tiến hành cập nhật thông tin trong hệ thống
@@ -109,11 +109,12 @@ Tính năng này cho phép quản trị viên hệ thống chỉnh sửa, cập 
 \noindent \textbf{Các yêu cầu chức năng}
 
 \begin{itemize} 
-    \item \textbf{REQ\_01} Hệ thống phải cho phép chỉnh sửa các trường thông tin cá nhân như họ tên, số CCCD, số BHYT, phân quyền, ... 
-    \item \textbf{REQ\_02} Hệ thống phải kiểm tra tính hợp lệ của thông tin được cập nhật trước khi lưu. 
-    \item \textbf{REQ\_03} Hệ thống phải lưu và cập nhật dữ liệu người dùng trong cơ sở dữ liệu ngay khi cập nhật thành công. 
-    \item \textbf{REQ\_04} Hệ thống phải ghi lại lịch sử thay đổi thông tin người dùng để phục vụ mục đích kiểm tra và truy vết. 
-    \item \textbf{REQ\_05} Hệ thống phải hiển thị thông báo kết quả cập nhật thành công hoặc thất bại cho quản trị viên.
+    \item \textbf{REQ\_01} Hệ thống phải cho phép chỉnh sửa các trường thông tin cá nhân như họ tên, ngày sinh, giới tính, số CCCD, số điện thoại, email. 
+    \item \textbf{REQ\_02} Hệ thống phải cho phép cấp lại mật khẩu mới nếu người yêu cầu chứng minh được mình là chủ tài khoản. 
+    \item \textbf{REQ\_03} Hệ thống phải kiểm tra tính hợp lệ của thông tin được cập nhật trước khi lưu. 
+    \item \textbf{REQ\_04} Hệ thống phải lưu và cập nhật dữ liệu người dùng trong cơ sở dữ liệu ngay khi cập nhật thành công. 
+    \item \textbf{REQ\_05} Hệ thống phải ghi lại lịch sử thay đổi thông tin người dùng để phục vụ mục đích kiểm tra và truy vết. 
+    \item \textbf{REQ\_06} Hệ thống phải hiển thị thông báo kết quả cập nhật thành công hoặc thất bại cho quản trị viên.
 \end{itemize}
 
 
@@ -131,11 +132,11 @@ Tính năng này cho phép quản trị viên hoặc nhân viên có thẩm quy�
 
     \item Người dùng truy cập vào giao diện tra cứu thông tin người dùng.
 
-    \item Nhập thông tin tìm kiếm như mã số người dùng, họ tên, số điện thoại, vai trò, ...
+    \item Nhập thông tin tìm kiếm như họ tên, số CCCD, vai trò, ...
 
     \item Hệ thống hiển thị danh sách kết quả phù hợp với tiêu chí tìm kiếm.
 
-    \item Người dùng chọn một bản ghi cụ thể để xem thông tin chi tiết như thông tin cá nhân, vai trò, phân quyền, ...
+    \item Người dùng chọn một bản ghi cụ thể để xem thông tin chi tiết như thông tin cá nhân, vai trò, ...
 
 \end{itemize}
 
@@ -143,7 +144,7 @@ Tính năng này cho phép quản trị viên hoặc nhân viên có thẩm quy�
 
 \begin{itemize}
 
-    \item \textbf{REQ\_01} Hệ thống phải cho phép tìm kiếm người dùng dựa trên nhiều tiêu chí khác nhau như họ tên, mã số, vai trò, số điện thoại, ...
+    \item \textbf{REQ\_01} Hệ thống phải cho phép tìm kiếm người dùng dựa trên nhiều tiêu chí khác nhau như họ tên, số CCCD, vai trò, ...
 
     \item \textbf{REQ\_02} Hệ thống phải hiển thị danh sách kết quả tìm kiếm một cách rõ ràng, có phân trang nếu kết quả quá nhiều.
 

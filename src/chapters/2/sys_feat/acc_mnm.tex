@@ -1,9 +1,201 @@
 \section{Quản lí tài khoản cá nhân}
 
+Nhóm tính năng Quản lí tài khoản cá nhân đóng vai trò trung tâm trong việc đảm bảo mỗi người dùng có thể truy cập, duy trì và bảo mật thông tin tài khoản của mình trong suốt quá trình sử dụng hệ thống. Nhóm tính năng này bao gồm các thao tác cơ bản như:
+\begin{itemize}
+    \item Đăng nhập vào hệ thống
+    \item Cập nhật thông tin cá nhân
+    \item Thay đổi mật khẩu
+    \item Đăng xuất khỏi hệ thống
+\end{itemize}
+
 \subsection{Đăng nhập}
 
-\subsection{Cập nhật thông tin cá nhân} 
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng đã được cấp tài khoản đăng nhập vào hệ thống bằng tên đăng nhập và mật khẩu. Việc đăng nhập là bước đầu tiên để xác thực danh tính người dùng, đồng thời xác định quyền truy cập tương ứng với vai trò mà họ đảm nhận trong hệ thống.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Người dùng được cấp tài khoản từ bộ phận quản trị hệ thống (quy trình cấp tài khoản được thực hiện thông qua nhóm tính năng Quản lí người dùng hệ thống).
+
+\item Người dùng truy cập giao diện đăng nhập của hệ thống.
+
+\item Người dùng nhập tên đăng nhập và mật khẩu đã được cung cấp.
+
+\item Hệ thống xác thực thông tin đăng nhập:
+    \begin{itemize}
+        \item Nếu hợp lệ, người dùng sẽ được chuyển đến giao diện chính tương ứng với quyền hạn của mình.
+        \item Nếu không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+    \end{itemize}
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+    \item \textbf{REQ\_01} Hệ thống chỉ cho phép người dùng đăng nhập bằng thông tin tài khoản hợp lệ đã được cấp.
+
+    \item \textbf{REQ\_02} Hệ thống phải kiểm tra và xác thực thông tin đăng nhập bằng cơ chế mã hóa băm mật khẩu.
+
+    \item \textbf{REQ\_03} Hệ thống phải thông báo lỗi rõ ràng nếu thông tin đăng nhập không hợp lệ.
+
+    \item \textbf{REQ\_04} Sau khi đăng nhập thành công, hệ thống phải chuyển người dùng đến giao diện tương ứng với vai trò của họ.
+
+    \item \textbf{REQ\_05} Hệ thống phải có cơ chế bảo vệ chống tấn công dò mật khẩu (ví dụ: giới hạn số lần đăng nhập sai).
+
+\end{itemize}
+
+\subsection{Cập nhật thông tin cá nhân}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng sau khi đăng nhập có thể xem và chỉnh sửa một số thông tin cá nhân của mình như số điện thoại, email nhằm đảm bảo thông tin luôn chính xác và cập nhật, phục vụ mục đích bảo mật tài khoản (thay đổi mật khẩu).
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Người dùng đăng nhập vào hệ thống.
+
+\item Người dùng truy cập giao diện quản lí tài khoản cá nhân.
+
+\item Người dùng chọn chức năng cập nhật thông tin cá nhân.
+
+\item Hệ thống hiển thị các trường thông tin cá nhân hiện tại.
+
+\item Người dùng tiến hành chỉnh sửa các trường được phép cập nhật (số điện thoại, email).
+
+\item Người dùng xác nhận lưu thay đổi bằng cách nhập mật khẩu.
+
+\item Hệ thống kiểm tra tính hợp lệ của dữ liệu và cập nhật thông tin nếu hợp lệ (thông qua OTP gửi đến số điện thoại, email).
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cho phép người dùng chỉnh sửa các trường thông tin được phép như số điện thoại, địa chỉ, email.
+
+\item \textbf{REQ\_02} Hệ thống phải hiển thị đúng thông tin cá nhân hiện tại của người dùng.
+
+\item \textbf{REQ\_03} Hệ thống phải kiểm tra tính hợp lệ của các trường thông tin đầu vào trước khi lưu.
+
+\item \textbf{REQ\_04} Hệ thống phải thông báo khi cập nhật thành công hoặc khi có lỗi xảy ra.
+
+\item \textbf{REQ\_05} Hệ thống không cho phép người dùng tự ý thay đổi các trường không thuộc quyền sửa (họ tên, số CCCD, giới tính, vai trò).
+
+\end{itemize}
 
 \subsection{Đăng xuất}
 
-\subsection{Thay đổi mật khẩu} 
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng kết thúc phiên làm việc hiện tại một cách an toàn, đảm bảo rằng thông tin và quyền truy cập của họ không bị lạm dụng bởi người khác sau khi rời khỏi thiết bị. Việc đăng xuất là một phần quan trọng trong quá trình đảm bảo an toàn và bảo mật thông tin cá nhân, đặc biệt trong môi trường nhiều người sử dụng chung một thiết bị hoặc tài khoản có quyền truy cập dữ liệu nhạy cảm.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Người dùng đăng nhập vào hệ thống và sử dụng các tính năng theo vai trò được phân quyền.
+
+\item Khi kết thúc phiên làm việc hoặc rời khỏi thiết bị, người dùng chọn chức năng “Đăng xuất”.
+
+\item Hệ thống yêu cầu xác nhận (tuỳ chọn) để chắc chắn người dùng muốn đăng xuất.
+
+\item Hệ thống xử lý việc đăng xuất:
+
+    \begin{itemize}
+        \item Hủy bỏ phiên làm việc hiện tại.
+        \item Xóa thông tin xác thực tạm thời được lưu trong bộ nhớ (session, token…).
+        \item Chuyển người dùng trở về giao diện đăng nhập.
+    \end{itemize}
+    
+\item Người dùng sẽ cần phải đăng nhập lại để sử dụng hệ thống tiếp.
+
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cung cấp nút hoặc tùy chọn rõ ràng cho phép người dùng đăng xuất ở bất kỳ thời điểm nào.
+
+\item \textbf{REQ\_02} Hệ thống phải hủy bỏ toàn bộ thông tin phiên làm việc của người dùng sau khi đăng xuất.
+
+\item \textbf{REQ\_03} Sau khi đăng xuất, hệ thống phải chuyển người dùng về trang đăng nhập.
+
+\item \textbf{REQ\_04} Hệ thống không được cho phép truy cập trở lại vào các chức năng bên trong nếu chưa đăng nhập lại.
+
+\item \textbf{REQ\_05} Nếu có bất kỳ token xác thực hoặc cookie tạm thời nào được sử dụng, hệ thống phải xóa chúng sau khi đăng xuất để đảm bảo an toàn.
+
+\end{itemize}
+
+\subsection{Thay đổi mật khẩu}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng tự thay đổi mật khẩu đăng nhập hệ thống của mình nhằm tăng cường tính bảo mật cho tài khoản, đặc biệt khi nghi ngờ mật khẩu bị lộ hoặc sau một khoảng thời gian sử dụng. Việc thay đổi mật khẩu là một trong những biện pháp quan trọng giúp bảo vệ dữ liệu cá nhân và thông tin bệnh án trong hệ thống.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}    
+    \item Đối với người dùng đã đăng nhập vào hệ thống, họ có thể truy cập vào giao diện quản lí tài khoản cá nhân:
+    \begin{itemize}
+
+    \item Người dùng đăng nhập vào hệ thống.
+
+    \item Người dùng truy cập giao diện quản lí tài khoản cá nhân.
+
+    \item Người dùng chọn chức năng thay đổi mật khẩu.
+
+    \item Hệ thống yêu cầu nhập mật khẩu hiện tại, mật khẩu mới và xác nhận lại mật khẩu mới.
+
+    \item Hệ thống kiểm tra:
+
+    \begin{itemize}
+        \item Mật khẩu hiện tại có đúng hay không.
+        \item Mật khẩu mới có trùng với mật khẩu hiện tại hay không.
+        \item Mật khẩu mới và xác nhận mật khẩu có khớp hay không.
+        \item Mật khẩu mới có đáp ứng các yêu cầu về độ mạnh không (độ dài tối thiểu, có ký tự đặc biệt, chữ hoa, chữ thường,...).
+    \end{itemize}
+
+    \item Nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản người dùng.
+
+    \item Hệ thống yêu cầu người dùng đăng nhập lại với mật khẩu mới (tuỳ theo chính sách bảo mật).
+
+    \end{itemize}
+
+    \item Đối với người dùng chưa đăng nhập vào hệ thống, họ có thể truy cập vào giao diện quên mật khẩu:
+    \begin{itemize}
+        \item Người dùng truy cập vào giao diện quên mật khẩu.
+        \item Người dùng nhập địa chỉ email hoặc số điện thoại đã đăng ký tài khoản.
+        \item Hệ thống gửi mã xác thực đến email hoặc số điện thoại đã đăng ký.
+        \item Người dùng nhập mã xác thực.
+        \item Nếu đúng, hệ thống yêu cầu người dùng nhập mật khẩu mới và xác nhận lại mật khẩu mới.
+        \item Hệ thống kiểm tra mật khẩu mới.
+        \item Nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản người dùng.
+        \item Hệ thống yêu cầu người dùng đăng nhập lại với mật khẩu mới.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01} Hệ thống phải cho phép người dùng thay đổi mật khẩu khi đã đăng nhập.
+
+\item \textbf{REQ\_02} Hệ thống phải phải cho phép người dùng thay đổi mật khẩu khi đã đăng xuất bằng cách dùng số điện thoại hoặc email.
+
+\item \textbf{REQ\_03} Hệ thống phải kiểm tra tính khớp giữa mật khẩu mới và xác nhận mật khẩu mới.
+
+\item \textbf{REQ\_04} Hệ thống phải kiểm tra độ mạnh của mật khẩu mới theo quy tắc bảo mật được quy định.
+
+\item \textbf{REQ\_05} Hệ thống phải mã hóa mật khẩu mới trước khi lưu vào cơ sở dữ liệu.
+
+\item \textbf{REQ\_06} Hệ thống phải thông báo rõ ràng nếu có lỗi xảy ra trong quá trình thay đổi mật khẩu.
+
+\end{itemize}
