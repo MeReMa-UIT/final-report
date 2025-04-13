@@ -1,11 +1,128 @@
 \section{Quản lí đơn thuốc}
 
+Nhóm tính năng quản lí đơn thuốc giúp người dùng có thể tạo, cập nhật và tra cứu đơn thuốc (tùy theo phân quyền) một cách tiện lợi, nhanh chóng.
+\begin{itemize}
+    \item Lập đơn thuốc
+    \item Cập nhật đơn thuốc
+    \item Tra cứu đơn thuốc
+    \item Xóa đơn thuốc
+    \item In đơn thuốc
+\end{itemize}
+
 \subsection{Lập đơn thuốc}
+
+\noindent \textbf{Giới thiệu tính năng}
+\begin{itemize}
+    \item Cho phép bác sĩ lập đơn thuốc trực tiếp trên hệ thống, gắn với hồ sơ khám bệnh cụ thể: nhằm mục đích dễ dàng lưu trữ, tra cứu và theo dõi quá trình điều trị của bệnh nhân.
+    \item Bác sĩ có thể chọn thuốc từ danh mục hệ thống hoặc tìm kiếm nhanh theo tên hoạt chất / tên thương mại.
+    \item Mỗi đơn thuốc gồm các thông tin: tên thuốc, liều dùng, số lần sử dụng trong ngày, số ngày điều trị, cách dùng, ghi chú thêm nếu cần. Ví dụ: Paracetamol 500mg, uống 2 lần/ngày, trong 5 ngày, sau ăn.
+\end{itemize}
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Bác sĩ đăng nhập vào hệ thống.
+    \item Bác sĩ truy cập vào giao diện ``Lập đơn thuốc''.
+    \item Bác sĩ lựa chọn bệnh nhân và các loại thuốc từ danh mục có sẵn trên hệ thống và nhập thông tin chi tiết về liều lượng, cách dùng, số lần/ngày và thời gian điều trị.
+    \begin{itemize}
+        \item Nếu hợp lệ: Lưu trữ đơn thuốc vào hệ thống.
+        \item Nếu không hợp lệ: Yêu cầu sửa / nhập lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Đơn thuốc phải gắn với bệnh nhân hợp lệ trong hệ thống.
+    \item \textbf{REQ\_02} Các loại thuốc phải có sẵn trong hệ thống và phải có liều lượng thích hợp.
+    \item \textbf{REQ\_03} Hệ thống phải có cơ chế tìm kiếm bệnh nhân và thuốc nhanh và chính xác.
+\end{itemize}
 
 \subsection{Cập nhật đơn thuốc}
 
+\noindent \textbf{Giới thiệu tính năng}
+Cho phép bác sĩ điều chỉnh thông tin đơn thuốc đã kê trước đó, nhằm phản ánh chính xác tình trạng bệnh của bệnh nhân sau khi thăm khám lại hoặc nhận được phản hồi từ bệnh nhân.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Bác sĩ đăng nhập vào hệ thống.
+    \item Bác sĩ truy cập vào giao diện ``Tra cứu đơn thuốc''.
+    \item Bác sĩ tìm đơn thuốc cần cập nhật.
+    \item Bác sĩ điều chỉnh đơn thuốc.
+    \begin{itemize}
+        \item Nếu hợp lệ: Lưu trữ đơn thuốc đã cập nhật vào hệ thống.
+        \item Nếu không hợp lệ: Yêu cầu sửa / nhập lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng} 
+\begin{itemize}
+    \item \textbf{REQ\_01} Các thông tin được cập nhật phải hợp lệ.
+    \item \textbf{REQ\_02} Hệ thống phải lưu lại đầy đủ lịch sử thay đổi của các đơn thuốc. (Sử dụng trường ``version'' để lưu trữ lịch sử phiên bản.)
+\end{itemize}
+
 \subsection{Tra cứu đơn thuốc}
+
+\noindent \textbf{Giới thiệu tính năng}
+Giúp người dùng dễ dàng tìm kiếm và truy xuất thông tin về các đơn thuốc đã kê.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Tra cứu đơn thuốc''.
+    \item Người dùng nhập các tiêu chí tìm kiếm như ``Tên bệnh nhân'', ``Tên thuốc'', ``Ngày kê đơn'',...
+    \begin{itemize}
+        \item Nếu tìm thấy: Hiển thị danh sách các kết quả và cho phép xem chi tiết mỗi kết quả.
+        \item Nếu không tìm thấy: Hiển thị ``Không tìm thấy kết quả'' và cho phép người dùng tiếp tục tìm kiếm.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải thực hiện việc tìm kiếm nhanh chóng và chính xác.
+    \item \textbf{REQ\_02} Hệ thống phải tuân thủ phân quyền khi thực hiện tìm kiếm.
+\end{itemize}
 
 \subsection{Xóa đơn thuốc}
 
+\noindent \textbf{Giới thiệu tính năng}
+Bác sĩ có thể xóa các đơn thuốc đã kê khi có sự cố hoặc thay đổi trong quá trình điều trị.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Bác sĩ đăng nhập vào hệ thống.
+    \item Bác sĩ truy cập vào giao diện ``Tra cứu đơn thuốc''.
+    \item Bác sĩ tìm đơn thuốc cần xóa.
+    \item Bác sĩ lựa chọn xóa đơn thuốc.
+    \item Hệ thống hiển thị cảnh báo xác nhận trước khi xóa.
+    \begin{itemize}
+        \item Nếu thành công: Hệ thống cập nhật trạng thái đơn thuốc thành ``Đã xóa''.
+        \item Nếu không thành công: Hệ thống hiển thị ``Xóa không thành công''.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải yêu cầu xác nhận lại trước khi xóa.
+    \item \textbf{RER\_02} Hệ thống phải lưu trữ đơn thuốc đã xóa với trạng thái ``Đã xóa'' và không được thực sự xóa đơn thuốc khỏi hệ thống.
+\end{itemize}
+
 \subsection{In đơn thuốc}
+
+\noindent \textbf{Giới thiệu tính năng}
+Người dùng có thể in đơn thuốc đã kê khi cần.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Tra cứu đơn thuốc''.
+    \item Người dùng tìm đơn thuốc cần in.
+    \item Người dùng lựa chọn format in và lựa chọn in đơn thuốc dưới dạng PDF hoặc trực tiếp qua máy in.
+    \begin{itemize}
+        \item Nếu in thành công: Hiển thị ``Đã in''
+        \item Nếu in không thành công: Hiển thị ``Không thành công'' và cho phép in lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải in đúng định dạng được chọn.
+\end{itemize}
