@@ -1,9 +1,100 @@
 \section{Quản lí hồ sơ bệnh án}
 
+Nhóm chức năng ``Quản lí hồ sơ bệnh án'' là nhóm chức năng chính của hệ thống, với vai trò đặc biệt quan trọng. Nhóm chức năng gồm các chức năng sau:
+\begin{itemize}
+    \item Thêm hồ sơ bệnh án
+    \item Cập nhật hồ sơ bệnh án
+    \item Tra cứu hồ sơ bệnh án
+    \item Xóa hồ sơ bệnh án
+\end{itemize}
+
 \subsection{Thêm hồ sơ bệnh án}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Thêm hồ sơ bệnh án'' cho phép người dùng thêm hồ sơ bệnh án từ bệnh án có sẵn hoặc tạo bệnh án mới.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Thêm hồ sơ bệnh án''.
+    \item Người dùng chọn thêm từ bệnh án có sẵn hoặc nhập bệnh án mới.
+    \item Người dùng nhập các thông tin bệnh án.
+    \begin{itemize}
+        \item Nếu thêm thành công: Lưu trữ hồ sơ bệnh án vào hệ thống.
+        \item Nếu thêm không thành công: Yêu cầu sửa / nhập lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hồ sơ bệnh án phải gắn với bệnh nhân hợp lệ trong hệ thống.
+\end{itemize}
 
 \subsection{Cập nhật hồ sơ bệnh án}
 
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Cập nhật hồ sơ bệnh án'' cho phép người dùng cập nhật thông tin bệnh, thay đổi chẩn đoán,...
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bênh án''
+    \item Người dùng tìm bệnh án cần cập nhật.
+    \item Người dùng lựa chọn ``Cập nhật hồ sơ bệnh án'' và cập nhật các thông tin cần thiết.
+    \begin{itemize}
+        \item Nếu thành công: Lưu trữ bệnh án đã cập nhật vào hệ thống.
+        \item Nếu không thành công: Yêu cầu sửa / nhập lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Các thông tin được cập nhật phải hợp lệ.
+    \item \textbf{REQ\_02} Hệ thống phải lưu lại đầy đủ lịch sử thay đổi của bệnh án. (Sử dụng trường ``version'' để lưu trữ lịch sử phiên bản.)
+\end{itemize}
+
 \subsection{Tra cứu hồ sơ bệnh án}
 
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Tra cứu hồ sơ bệnh án'' cho phép người dùng thực hiện việc tìm kiếm hồ sơ bệnh án nhanh chóng và chính xác.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bệnh án''.
+    \item Người dùng nhập các tiêu chí tìm kiếm như ``Tên bệnh nhân'',...
+    \begin{itemize}
+        \item Nếu tìm thấy: Hiển thị danh sách bệnh án đã tìm thấy.
+        \item Nếu không tìm thấy: Hiển thị ``Không tìm thấy''.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải thực hiện việc tìm kiếm nhanh chóng và chính xác.
+    \item \textbf{REQ\_02} Hệ thống phải tuân thủ phân quyền khi thực hiện tìm kiếm.
+\end{itemize}
+
 \subsection{Xóa hồ sơ bệnh án}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Xóa hồ sơ bệnh án'' cho phép người dùng thực hiện thao tác xóa các bệnh án khi vô tình trùng lặp hoặc bệnh án giả lập,...
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bệnh án''.
+    \item Người dùng tìm bệnh án cần xóa.
+    \item Người dùng lựa chọn xóa đơn thuốc.
+    \item Hệ thống hiển thị cảnh báo xác nhận trước khi xóa.
+    \begin{itemize}
+        \item Nếu thành công: Hệ thống cập nhật trạng thái bệnh án thành ``Đã xóa''.
+        \item Nếu không thành công: Hệ thống hiển thị ``Xóa không thành công''.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải yêu cầu xác nhận lại trước khi xóa.
+    \item \textbf{RER\_02} Hệ thống phải lưu trữ bệnh án đã xóa với trạng thái ``Đã xóa'' và không được thực xóa bệnh án khỏi hệ thống.
+\end{itemize}
