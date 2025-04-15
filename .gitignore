@@ -8,7 +8,10 @@
 *.xdv
 .fuse_hidden*
 
-.direnv/
+.devenv*
+.direnv
+.pre-commit-config.yaml
+devenv.local.nix
 build/** 
 
 !build/main.pdf
