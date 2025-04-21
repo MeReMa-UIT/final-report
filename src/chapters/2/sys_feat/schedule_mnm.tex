@@ -1,0 +1,99 @@
+\section{Quản lí lịch hẹn}
+
+Nhóm tính năng quản lí lịch hẹn giúp bác sĩ, bệnh nhân và các nhân viên y tế dễ dàng sắp xếp lịch hẹn một cách hợp lí, tiện lợi. Nhóm tính năng gồm các tính năng sau:
+\begin{itemize}
+    \item Lập lịch hẹn
+    \item Cập nhật lịch hẹn
+    \item Tra cứu lịch hẹn
+    \item Hủy lịch hẹn
+\end{itemize}
+
+\subsection{Lập lịch hẹn}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Lập lịch hẹn'' cho phép người dùng sắp xếp lịch hẹn theo nhu cầu.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập tính năng ``Lập lịch hẹn''.
+    \item Người dùng lựa chọn thời gian, người cần hẹn và mục đích cuộc hẹn.
+    \begin{itemize}
+        \item Nếu lịch hẹn hợp lệ: Lưu trữ cuộc hẹn vào hệ thống.
+        \item Nếu không hợp lệ: Yêu cầu sửa / lập lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Người cần hẹn phải có trong hệ thống.
+    \item \textbf{REQ\_02} Lịch hẹn phải không được trùng lặp với lịch hẹn khác.
+\end{itemize}
+
+\subsection{Cập nhật lịch hẹn}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Cập nhật lịch hẹn'' cho phép người dùng sửa các thông tin về cuộc hẹn khi không thể đáp ứng cuộc hẹn đó.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào tính năng ``Tra cứu cuộc hẹn''.
+    \item Người dùng tìm cuộc hẹn cần cập nhật.
+    \item Người dùng cập nhật các thông tin cần thiết.
+    \begin{itemize}
+        \item Nếu hợp lệ: Lưu trữ cuộc hẹn đã cập nhật vào hệ thống.
+        \item Nếu không hợp lệ: Yêu cầu sửa / cập nhật lại.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Các thông tin được cập nhật phải hợp lệ.
+\end{itemize}
+
+\subsection{Tra cứu lịch hẹn}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Tra cứu lịch hẹn'' cho phép người dùng tìm kiếm và xem các lịch hẹn của bản thân.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào tính năng ``Tra cứu lịch hẹn''.
+    \item Người dùng thực hiện tìm lịch hẹn theo người cần hẹn hoặc thời gian.
+    \begin{itemize}
+        \item Nếu tìm thấy: Hiển thị kết quả cho người dùng.
+        \item Nếu không tìm thấy: Hiển thị ``Không tìm thấy lịch hẹn''.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải thực hiện việc tìm kiếm nhanh và chính xác.
+    \item \textbf{REQ\_02} Hệ thống chỉ tìm các lịch hẹn của người dùng hiện tại.
+\end{itemize}
+
+\subsection{Hủy lịch hẹn}
+
+\noindent \textbf{Giới thiệu tính năng}
+Tính năng ``Hủy lịch hẹn'' cho phép người dùng hủy các cuộc hẹn khi không còn cần thiết hoặc không thể sửa theo nhu cầu.
+
+\noindent \textbf{Quy trình}
+\begin{itemize}
+    \item Người dùng đăng nhập vào hệ thống.
+    \item Người dùng truy cập vào tính năng ``Tra cứu lịch hẹn''.
+    \item Người dùng tìm lịch hẹn cần hủy.
+    \item Người dùng thực hiện hủy cuộc hẹn.
+    \item Hệ thống hiển thị cảnh báo xác nhận trước khi hủy.
+    \begin{itemize}
+        \item Nếu thành công: Cập nhật trạng thái cuộc hẹn thành ``Đã hủy''.
+        \item Nếu không thành công: Hệ thống hiển thị ``Hủy không thành công''.
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+\begin{itemize}
+    \item \textbf{REQ\_01} Hệ thống phải yêu cầu xác nhận lại trước khi hủy.
+    \item \textbf{REQ\_02} Hệ thống phải lưu trữ lịch hẹn với trạng thái ``Đã hủy''.
+\end{itemize}
