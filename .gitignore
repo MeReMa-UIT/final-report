@@ -10,6 +10,8 @@
 
 .devenv/
 .direnv/
-build/** 
 
+build/** 
 !build/main.pdf
+
+CHANGELOG.md
