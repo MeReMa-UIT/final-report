@@ -5,12 +5,12 @@ initial_tag = "v0.1.0"
 body = """
 {% if version %}\
     {% if previous.version %}\
-        ## [{{ version | trim_start_matches(pat="v") }}]($REPO/compare/{{ previous.version }}..{{ version }}) - {{ timestamp | date(format="%d-%m-%Y") }}
+        ## [[{{ version | trim_start_matches(pat="v") }}]($REPO/compare/{{ previous.version }}..{{ version }})]  {{ timestamp | date(format="%d-%m-%Y") }}
     {% else %}\
-        ## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+        ## [{{ version | trim_start_matches(pat="v") }}]  {{ timestamp | date(format="%d-%m-%Y") }}
     {% endif %}\
 {% else %}\
-    ## [Unreleased]
+    ## [Unreleased]  {{ timestamp | date(format="%d-%m-%Y") }}
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
     ### {{ group | striptags | trim | upper_first }}
