@@ -21,14 +21,14 @@ body = """
     | filter(attribute="scope")
     | sort(attribute="scope") %}
         - **({{commit.scope}})**{% if commit.breaking %} **[BREAKING]** {% endif %} \
-            {{ commit.message | upper_first }} - by @{{ commit.author.name }} ([{{ commit.id | truncate(length=7, end="") }}]($REPO/commit/{{ commit.id }})) 
+            {{ commit.message | upper_first }} - by {{ commit.author.name }} ([{{ commit.id | truncate(length=7, end="") }}]($REPO/commit/{{ commit.id }})) 
     {%- endfor -%}
     {% raw %}\n{% endraw %}\
     {%- for commit in commits %}
         {%- if commit.scope -%}
         {% else -%}
             - {% if commit.breaking %} **[BREAKING]** {% endif %}\
-                {{ commit.message | upper_first }} - by @{{ commit.author.name }} ([{{ commit.id | truncate(length=7, end="") }}]($REPO/commit/{{ commit.id }})) 
+                {{ commit.message | upper_first }} - by {{ commit.author.name }} ([{{ commit.id | truncate(length=7, end="") }}]($REPO/commit/{{ commit.id }})) 
         {% endif -%}
     {% endfor -%}
 {% endfor %}\n
