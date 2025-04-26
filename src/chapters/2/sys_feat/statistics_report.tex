@@ -1,17 +1,88 @@
 \section{Thống kê và lập báo cáo}
 
+Nhóm tính năng Thống kê và lập báo cáo hỗ trợ người dùng tổng hợp, phân tích và trình bày các dữ liệu quan trọng trong hệ thống như số lượng bệnh án tiếp nhận, bệnh lý phổ biến và lượng thuốc sử dụng. Thông qua các báo cáo trực quan và chi tiết, hệ thống giúp quản trị viên và các bác sĩ nắm bắt nhanh chóng tình hình vận hành, xu hướng bệnh tật cũng như nhu cầu sử dụng thuốc, từ đó hỗ trợ công tác quản lý và ra quyết định hiệu quả.
+
+Nhóm tính năng này bao gồm các tính năng chính như sau:
+\begin{itemize}
+    \item Báo cáo thống kê số lượng bệnh án tiếp nhận
+    \item Báo cáo thống kê bệnh lí phổ biến
+    \item Báo cáo thống kê số lượng thuốc sử dụng
+\end{itemize}
+
+\subsection{Báo cáo thống kê số lượng bệnh án tiếp nhận}
+
 \noindent \textbf{Giới thiệu tính năng}
-Chức năng thống kê và lập báo cáo là một trong những chức năng quan trọng giúp hỗ trợ các bác sĩ, nhân viên y tế theo dõi, đánh giá, và ra quyết định dựa trên dữ liệu y tế được lưu trữ.
+
+Tính năng này cho phép người dùng là nhân viên bệnh viện thống kê số lượng bệnh án đã được tiếp nhận trong hệ thống theo khoảng thời gian cụ thể (ngày, tháng, quý, năm), và theo khoa tiếp nhận. Mục tiêu nhằm hỗ trợ bệnh viện, cơ sở y tế đánh giá khối lượng bệnh nhân tiếp nhận theo thời gian thực, nhằm phân bổ hợp lí nguồn nhân lực.
 
 \noindent \textbf{Quy trình}
+
 \begin{itemize}
-    \item Người dùng đăng nhập vào hệ thống.
-    \item Người dùng truy cập vào giao diện ``Thống kê và báo cáo''
-    \item Hệ thống tự động tạo thống kê, báo cáo và hiển thị cho người dùng.
+    \item Mỗi khi bệnh nhân được tiếp nhận, hệ thống sẽ tự động ghi lại thông tin mà bác sĩ điền vào bệnh án vào cơ sở dữ liệu.
+    \item Hệ thống sẽ tự động cập nhật số lượng bệnh án tiếp nhận vào cơ sở dữ liệu.
+    \item Người dùng truy cập vào giao diện báo cáo thống kê trong ứng dụng.
+    \item Người dùng chọn khoảng thời gian và khoa cần thống kê.
+    \item Hệ thống truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng bệnh án tiếp nhận trong khoảng thời gian đã chọn.
+    \item Hệ thống hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
 \end{itemize}
 
 \noindent \textbf{Các yêu cầu chức năng}
+
 \begin{itemize}
-    \item \textbf{REQ\_01} Hệ thống tự động tổng hợp dữ liệu từ hồ sơ bệnh án.
-    \item \textbf{REQ\_02} Hệ thống cho phép xuất báo cáo dưới dạng PDF với các biểu đồ trực quan.
+    \item \textbf{REQ\_01}: Hệ thống phải cho phép người dùng chọn khoảng thời gian và khoa để thống kê số lượng bệnh án tiếp nhận.
+    \item \textbf{REQ\_02}: Hệ thống phải truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng bệnh án tiếp nhận trong khoảng thời gian đã chọn một cách nhanh chóng.
+    \item \textbf{REQ\_03}: Hệ thống phải hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
+    \item \textbf{REQ\_04}: Hệ thống ít nhất phải cho phép người dùng xuất báo cáo thống kê dưới định dạng PDF.     
+\end{itemize}
+
+\subsection{Báo cáo thống kê bệnh lí phổ biến}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này giúp nhân viên bệnh viện thống kê các loại bệnh lí phổ biến nhất theo giới tính, lứa tuổi trong một khoảng thời gian (ngày, tháng, quý, năm) dựa trên thông tin chẩn đoán trong các bệnh án đã lưu trong hệ thống. Mục tiêu của tính năng này nhằm hỗ trợ phân tích tình hình sức khỏe cộng đồng, xu hướng bệnh tật theo thời gian nhằm giúp bệnh viện vận hành tốt hơn.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+    \item Mỗi khi bác sĩ chẩn đoán bệnh cho bệnh nhân, hệ thống sẽ tự động ghi lại thông tin chẩn đoán vào cơ sở dữ liệu.
+    \item Hệ thống sẽ tự động cập nhật thông tin về các loại bệnh lí đã được chẩn đoán vào cơ sở dữ liệu.
+    \item Người dùng truy cập vào giao diện báo cáo thống kê trong ứng dụng.
+    \item Người dùng chọn khoảng thời gian, nhóm tuổi, giới tính cần thống kê.
+    \item Hệ thống truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng bệnh lí phổ biến trong khoảng thời gian đã chọn.
+    \item Hệ thống hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+    \item \textbf{REQ\_01}: Hệ thống phải cho phép người dùng chọn khoảng thời gian, nhóm tuổi, giới tính để thống kê các loại bệnh lí phổ biến.
+    \item \textbf{REQ\_02}: Hệ thống phải truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng bệnh lí phổ biến trong khoảng thời gian đã chọn một cách nhanh chóng.
+    \item \textbf{REQ\_03}: Hệ thống phải hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
+    \item \textbf{REQ\_04}: Hệ thống ít nhất phải cho phép người dùng xuất báo cáo thống kê dưới định dạng PDF.
+\end{itemize}
+
+\subsection{Báo cáo thống kê số lượng thuốc sử dụng}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép thống kê số lượng các loại thuốc đã được kê trong các đơn thuốc, nhằm phục vụ việc kiểm soát tình hình sử dụng thuốc, hỗ trợ chuẩn bị nguồn cung để bệnh viện kịp thời nhập đủ số lượng thuốc phục vụ cho bệnh nhân.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+    \item Mỗi khi bác sĩ kê đơn thuốc cho bệnh nhân, hệ thống sẽ tự động ghi lại thông tin kê đơn vào cơ sở dữ liệu.
+    \item Hệ thống sẽ tự động cập nhật thông tin về các loại thuốc đã được kê đơn vào cơ sở dữ liệu.
+    \item Người dùng truy cập vào giao diện báo cáo thống kê trong ứng dụng.
+    \item Người dùng chọn khoảng thời gian cần thống kê.
+    \item Hệ thống truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng thuốc đã được kê đơn trong khoảng thời gian đã chọn.
+    \item Hệ thống hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+    \item \textbf{REQ\_01}: Hệ thống phải cho phép người dùng chọn khoảng thời gian để thống kê số lượng thuốc đã được kê đơn.
+    \item \textbf{REQ\_02}: Hệ thống phải truy vấn dữ liệu từ cơ sở dữ liệu và tính toán số lượng thuốc đã được kê đơn trong khoảng thời gian đã chọn một cách nhanh chóng.
+    \item \textbf{REQ\_03}: Hệ thống phải hiển thị kết quả thống kê dưới dạng biểu đồ hoặc bảng số liệu.
+    \item \textbf{REQ\_04}: Hệ thống ít nhất phải cho phép người dùng xuất báo cáo thống kê dưới định dạng PDF.
 \end{itemize}
