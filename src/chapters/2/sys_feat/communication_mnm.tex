@@ -1,0 +1,92 @@
+\section{Quản lí liên lạc và trao đổi thông tin}
+
+Nhóm tính năng quản lí liên lạc và trao đổi thông tin cho phép các bên liên quan trong hệ thống — bao gồm bác sĩ, điều dưỡng và bệnh nhân — có thể gửi và nhận thông tin một cách thuận tiện, an toàn và hiệu quả. Tính năng này đóng vai trò là cầu nối giúp đảm bảo việc theo dõi, cập nhật tình trạng điều trị, đặt câu hỏi và phản hồi diễn ra thông suốt trong quá trình chăm sóc sức khỏe.
+
+Nhóm tính năng này bao gồm các tính năng chính như sau:
+\begin{itemize}
+    \item Soạn thảo và gửi tin nhắn
+    \item Nhận tin nhắn
+    \item Lưu trữ tin nhắn
+\end{itemize}
+
+\subsection{Soạn thảo và gửi tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng (bệnh nhân hoặc bác sĩ) tạo nội dung tin nhắn để gửi cho bên còn lại, phục vụ cho mục đích trao đổi thông tin y tế giữa đôi bên. Tin nhắn có thể là văn bản liên quan đến tình trạng sức khỏe, tư vấn hoặc trao đổi hành chính, cũng có thể là tệp đính kèm.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+
+\item Bệnh nhân đến thăm khám ở bệnh viện, được tiếp nhận và cấp tài khoản cá nhân.
+\item Bác sĩ phụ trách khám bệnh sẽ xuất hiện trong danh sách liên hệ của bệnh nhân ngay sau khi bệnh án của bệnh án được thành lập.
+\item Bác sĩ, bệnh nhân có thể soạn thảo tin nhắn bao gồm văn bản chữ và tiệp đính kèm.
+\item Gửi tin nhắn sau khi đã hoàn tất.
+
+
+\end{itemize}
+
+\vspace{1em} \noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01}: Hệ thống phải cho phép chọn người nhận từ danh sách liên hệ hoặc qua tìm kiếm.
+
+\item \textbf{REQ\_02}: Hệ thống phải cung cấp khung nhập nội dung tin nhắn dạng văn bản.
+
+\item \textbf{REQ\_03}: Hệ thống phải cung cấp nút để đính kèm tệp với tin nhắn.
+
+\item \textbf{REQ\_04}: Hệ thống phải lưu tạm thời nội dung đang soạn nếu người dùng thoát giữa chừng.
+
+\item \textbf{REQ\_05}: Hệ thống chỉ cho phép bệnh nhân gửi tin nhắn đến bác sĩ trong thời gian hiệu lực. Sau khi hết thời gian hiệu lực, bệnh nhân không thể gửi tin nhắn đến bác sĩ. 
+
+\end{itemize}
+
+\subsection{Nhận tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng nhận tin nhắn từ bên gửi và hiển thị thông báo để nhắc nhở người dùng xem tin nhắn đến. Tin nhắn có thể là văn bản liên quan đến tình trạng sức khỏe, tư vấn hoặc trao đổi hành chính, cũng có thể là tệp đính kèm.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+    \item Người gửi gửi tin nhắn đến người nhận thông qua giao diện ứng dụng.
+    \item Hệ thống nhận được tin nhắn và lưu trữ vào cơ sở dữ liệu.
+    \item Hệ thống gửi thông báo đến người nhận về tin nhắn mới.
+    \item Người nhận mở ứng dụng và xem thông báo về tin nhắn mới.
+\end{itemize}
+
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+
+\item \textbf{REQ\_01}: Hệ thống phải đảm bảo rằng tin nhắn được gửi đến người nhận thành công.
+\item \textbf{REQ\_02}: Hệ thống phải thông báo ngay cho người nhận về tin nhắn mới.
+
+\end{itemize}
+
+\subsection{Lưu trữ tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép hệ thống lưu trữ tin nhắn đã gửi và nhận giữa người dùng. Tin nhắn được lưu trữ trong cơ sở dữ liệu trong một khoảng thời gian nhất định trước để người dùng có thể xem lại sau này.
+
+\noindent \textbf{Quy trình}
+
+\begin{itemize}
+    \item Người gửi gửi tin nhắn đến người nhận thông qua giao diện ứng dụng.
+    \item Hệ thống nhận được tin nhắn và lưu trữ vào cơ sở dữ liệu.
+    \item Hệ thống cập nhật thời gian của tin nhắn mới nhất trong cuộc hội thoại.
+    \item Nếu sau một khoảng thời gian nhất định mà vẫn không có tin nhắn mới trong cuộc hội thoại, hệ thống sẽ tự động xóa cuộc hội thoại.
+\end{itemize}
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+\item \textbf{REQ\_01}: Hệ thống phải lưu trữ cuộc hội thoại trong khoảng thời gian ít nhất là 90 ngày kể từ tin nhắn cuối cùng.
+\item \textbf{REQ\_02}: Hệ thống phải cho phép người dùng xem lại tin nhắn đã gửi và nhận trong khoảng thời gian lưu trữ.
+\item \textbf{REQ\_03}: Hệ thống phải bảo đảm rằng tin nhắn đã gửi và nhận được lưu trữ an toàn và không bị mất mát, không bị lộ ra bên ngoài.
+\end{itemize}
