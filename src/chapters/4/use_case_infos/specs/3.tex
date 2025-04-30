@@ -1,0 +1,55 @@
+\subsection{Đặc tả Use Case ``Quên mật khẩu''}
+
+\subsubsection{Tóm tắt}
+Người dùng quên mật khẩu (Người dùng bao gồm admin, bác sĩ, nhân viên tiếp nhận và bệnh nhân).
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+    \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
+    \item Người dùng nhấn nút ``Quên mật khẩu'', hệ thống chuyển đến giao diện quên mật khẩu.
+    \item Người dùng nhập ``tên đăng nhập'' và nhấn nút ``Lấy mã xác minh''.
+    \item Hệ thống kiểm tra thông tin, nếu hợp lệ, hệ thống gửi mã xác minh đến địa chỉ email.
+    \item Người dùng nhập mã xác minh và nhấn nút ``Tiếp theo''.
+    \item Hệ thống kiểm tra mã xác minh, nếu hợp lệ, hệ thống chuyển đến giao diện nhập mật khẩu mới.
+    \item Người dùng nhập mật khẩu mới và nhấn nút ``Xác nhận''.
+    \item Hệ thống kiểm tra mật khẩu mới, nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản và thông báo ``Đổi mật khẩu thành công''.
+    \item Hệ thống chuyển về giao diện đăng nhập.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+    \item Nếu thông tin không hợp lệ, hệ thống sẽ thông báo ``Tài khoản không tồn tại'' và quay về màn hình quên mật khẩu.
+    \item Nếu người dùng không nhập mã xác minh hoặc mã xác minh không hợp lệ, hệ thống sẽ thông báo ``Mã xác minh không đúng'' và quay về màn hình quên mật khẩu.
+    \item Nếu người dùng không nhập mật khẩu mới hoặc mật khẩu mới không hợp lệ, hệ thống sẽ thông báo ``Mật khẩu không hợp lệ'' và quay về màn hình nhập mật khẩu mới.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+    \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
+    \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+    \begin{itemize}
+        \item Màn hình hiển thị thông báo lỗi.
+        \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+        \item Con trỏ chuột được đặt vào trường dữ liệu không hợp lệ đầu tiên.
+        \item Khi người dùng nhập lại thông tin vào trường dữ liệu đó thì màu sắc của trường dữ liệu đó sẽ trở về màu sắc mặc định.
+    \end{itemize}
+    \item Xảy ra lỗi nếu:
+    \begin{itemize}
+        \item Nhập thiếu các trường thông tin bắt buộc.
+        \item Nhập không đúng kí tự trong bảng mã ASCII.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+\begin{itemize}
+    \item Người dùng đang ở giao diện đăng nhập.
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+    \item Thực hiện thành công: Người dùng được chuyển về giao diện đăng nhập.
+    \item Thực hiện không thành công: Người dùng trở về giao diện quên mật khẩu.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
