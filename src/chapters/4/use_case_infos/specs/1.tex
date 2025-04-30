@@ -1,0 +1,54 @@
+\subsection{Đặc tả Use Case ``Đăng nhập''}
+
+\subsubsection{Tóm tắt}
+Người dùng đăng nhập (Người dùng bao gồm admin, bác sĩ, nhân viên tiếp nhận và bệnh nhân).
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+    \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
+    \item Người dùng nhập thông tin bắt buộc vào các trường ``tên đăng nhập'' và ``mật khẩu'' rồi nhấn nút ``Đăng nhập''.
+    \item Hệ thống kiểm tra thông tin, nếu thông tin hợp lệ thì chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+    \item Nếu thông tin không hợp lệ, hệ thống sẽ thông báo ``Tài khoản không tồn tại'' và quay về màn hình đăng nhập.
+    \item Nếu người dùng không nhập hoặc nhập thiếu thông tin bắt buộc, hệ thống sẽ thông báo ``Vui lòng nhập đầy đủ thông tin'' và quay về màn hình đăng nhập.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+    \item Thông tin đăng nhập phải là kí tự trong bảng mã ASCII.
+    \item Người dùng đăng nhập bằng loại tài khoản nào thì sẽ được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản đó.
+    \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+    \begin{itemize}
+        \item Màn hình hiển thị thông báo lỗi.
+        \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+        \item Con trỏ chuột được đặt vào trường dữ liệu không hợp lệ đầu tiên.
+        \item Khi người dùng nhập lại thông tin vào trường dữ liệu đó thì màu sắc của trường dữ liệu đó sẽ trở về màu sắc mặc định.
+    \end{itemize}
+    \item Yêu cầu đăng nhập:
+    \begin{itemize}
+        \item Điền đúng kí tự trong bảng mã ASCII cho các trường.
+        \item Điền đầy đủ thông tin bắt buộc.
+    \end{itemize}
+    \item Xảy ra lỗi nếu:
+    \begin{itemize}
+        \item Nhập thiếu 1 trong 2 hoặc cả 2 trường thông tin bắt buộc.
+        \item Nhập không đúng kí tự trong bảng mã ASCII.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+\begin{itemize}
+    \item Người dùng đang ở giao diện đăng nhập.
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+    \item Thực hiện thành công: Người dùng được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
+    \item Thực hiện không thành công: Người dùng trở về giao diện đăng nhập.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
