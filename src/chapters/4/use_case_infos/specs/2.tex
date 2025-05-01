@@ -13,20 +13,19 @@ Người dùng đổi mật khẩu (Người dùng bao gồm admin, bác sĩ, nh
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 \begin{enumerate}
-    \item Nếu người dùng không nhập hoặc nhập sai mật khẩu cũ, hệ thống thông báo lỗi.
-    \item Nếu người dùng không nhập lại hoặc nhập lại sai mật khẩu mới, hệ thống thông báo lỗi.
-    \item Nếu người dùng nhập mật khẩu mới trùng với mật khẩu cũ, hệ thống thông báo lỗi.
+    \item Nếu người dùng không nhập hoặc nhập sai mật khẩu cũ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu người dùng không nhập lại hoặc nhập lại sai mật khẩu mới, hệ thống thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu người dùng nhập mật khẩu mới trùng với mật khẩu cũ, hệ thống thông báo lỗi và yêu cầu nhập lại.
 \end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
     \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
+    \item Mật khẩu mới phải có ít nhất 6 kí tự và không được trùng với mật khẩu cũ.
     \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
     \begin{itemize}
         \item Màn hình hiển thị thông báo lỗi.
         \item Các trường dữ liệu không hợp lệ được bôi đỏ.
-        \item Con trỏ chuột được đặt vào trường dữ liệu không hợp lệ đầu tiên.
-        \item Khi người dùng nhập lại thông tin vào trường dữ liệu đó thì màu sắc của trường dữ liệu đó sẽ trở về màu sắc mặc định.
     \end{itemize}
     \item Xảy ra lỗi nếu:
     \begin{itemize}
@@ -37,7 +36,7 @@ Người dùng đổi mật khẩu (Người dùng bao gồm admin, bác sĩ, nh
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
 \begin{itemize}
-    \item Người dùng đang ở giao diện đổi mật khẩu.
+    \item Người dùng đang ở giao diện xem thông tin tài khoản.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
