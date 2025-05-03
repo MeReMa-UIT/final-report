@@ -1,0 +1,51 @@
+\subsection{Đặc tả Use Case ``Cập nhật thông tin bệnh án''}
+
+\subsubsection{Tóm tắt}
+Bác sĩ cập nhật thông tin bệnh án của bệnh nhân.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+    \item Bác sĩ đang ở giao diện xem chi tiết bệnh án.
+    \item Bác sĩ nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật thông tin bệnh án.
+    \item Bác sĩ nhập các thông tin bệnh án cần cập nhật.
+    \item Hệ thống kiểm tra và ghi nhận.
+    \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết bệnh án.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+    \item Nếu bác sĩ nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết bệnh án.
+    \item Nếu bác sĩ nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+    \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+    \item Các thông tin phải được nhập đúng kiểu dữ liệu.
+    \item Các thông tin có thể cập nhật bao gồm:
+    \begin{itemize}
+        \item Loại bệnh án.
+        \item Chẩn đoán chính.
+        \item Chẩn đoán phụ.
+        \item Đường dẫn đến file bệnh án chi tiết.
+        \item Thời gian xuất viện.
+        \item Thời gian hiệu lực.
+    \end{itemize}
+    \item Xảy ra lỗi nếu:
+    \begin{itemize}
+        \item Nhập không đúng kí tự trong bảng mã ASCII.
+        \item Nhập không đúng kiểu dữ liệu.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Bác sĩ đang ở giao diện xem chi tiết bệnh án.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+    \item Thực hiện thành công: Hệ thống cập nhật thông tin bệnh án và quay về giao diện xem chi tiết bệnh án.
+    \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}

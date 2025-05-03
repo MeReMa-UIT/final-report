@@ -1,0 +1,45 @@
+\subsection{Đặc tả Use Case ``Xem danh sách bệnh án''}
+
+\subsubsection{Tóm tắt}
+Người dùng xem danh sách bệnh án (người dùng bao gồm bác sĩ và bệnh nhân).
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+    \item Nếu người dùng là bác sĩ:
+    \begin{itemize}
+    \item Bác sĩ đang ở giao diện chính.
+    \item Bác sĩ nhấn nút quản lí bệnh án, hệ thống chuyển đến giao diện quản lí bệnh án.
+    \item Bác sĩ tìm và chọn bệnh nhân hợp lệ, hệ thống chuyển đến giao diện xem thông tin bệnh nhân (bao gồm danh sách bệnh án).
+    \end{itemize}
+    \item Nếu người dùng là bệnh nhân:
+    \begin{itemize}
+        \item Bệnh nhân đang ở giao diện chính.
+        \item Bệnh nhân nhấn nút xem bệnh án, hệ thống chuyển đến giao diện xem danh sách bệnh án.
+    \end{itemize}
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+Nếu bác sĩ chọn bệnh nhân không hợp lệ, hệ thống thông báo lỗi và yêu cầu chọn lại
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+    \item Bác sĩ phải chọn bệnh nhân hợp lệ.
+    \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+    \item Xảy ra lỗi nếu:
+    \begin{itemize}
+        \item Bác sĩ chọn bệnh nhân không hợp lệ.
+        \item Nhập không đúng kí tự trong bảng mã ASCII.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Người dùng dang ở giao diện chính của hệ thống.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+    \item Thực hiện thành công: Hệ thống hiển thị danh sách bệnh án của bệnh nhân.
+    \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}

@@ -1,0 +1,56 @@
+\subsection{Đặc tả Use Case ``Thêm hồ sơ bệnh án''}
+
+\subsubsection{Tóm tắt}
+Bác sĩ thêm hồ sơ bệnh án cho bệnh nhân.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+    \item Bác sĩ đang ở giao diện xem thông tin bệnh nhân.
+    \item Bác sĩ nhấn nút thêm bệnh án, hệ thống chuyển đến giao diện thêm bệnh án.
+    \item Bác sĩ nhập thông tin bệnh án.
+    \item Bác sĩ nhấn nút thêm bệnh án, hệ thống kiểm tra thông tin và ghi nhận.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+    \item Nếu bác sĩ nhập bệnh án không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu bác sĩ nhấn nút hủy, hệ thống quay về giao diện xem thông tin bệnh nhân.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+    \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
+    \item Các trường thông tin phải được nhập kiểu dữ liệu tương ứng.
+    \item Các trường thông tin bao gồm:
+    \begin{itemize}
+        \item Loại bệnh án.
+        \item Chẩn đoán chính.
+        \item Chẩn đoán phụ.
+        \item Đường dẫn đến file bệnh án.
+        \item Thời gian xuất viện.
+        \item Thời gian hiệu lực.
+    \end{itemize}
+    \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+    \begin{itemize}
+        \item Màn hình hiển thị thông báo lỗi.
+        \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+    \end{itemize}
+    \item Xảy ra lỗi nếu:
+    \begin{itemize}
+        \item Nhập thiếu các trường thông tin bắt buộc.
+        \item Nhập không đúng kí tự trong bảng mã ASCII.
+        \item Nhập thông tin không đúng kiểu dữ liệu.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Bác sĩ đang ở giao diện xem thông tin bệnh nhân.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+    \item Thực hiện thành công: Hệ thống lưu lại hồ sơ bệnh án và chuyển về giao diện xem thông tin bệnh nhân.
+    \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
