@@ -12,23 +12,25 @@ Người dùng quên mật khẩu (Người dùng bao gồm admin, bác sĩ, nh�
     \item Hệ thống kiểm tra thông tin, nếu hợp lệ, hệ thống gửi mã xác minh đến địa chỉ email và chuyển đến giao diện nhập mã xác minh.
     \item Người dùng nhập mã xác minh và nhấn nút ``Tiếp theo''.
     \item Hệ thống kiểm tra mã xác minh, nếu hợp lệ, hệ thống chuyển đến giao diện nhập mật khẩu mới.
-    \item Người dùng nhập mật khẩu mới và nhấn nút ``Đặt lại mật khẩu''.
+    \item Người dùng nhập mật khẩu mới, nhập lại mật khẩu mới và nhấn nút ``Đặt lại mật khẩu''.
     \item Hệ thống kiểm tra mật khẩu mới, nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản và thông báo ``Đặt lại mật khẩu thành công''.
     \item Hệ thống chuyển về giao diện đăng nhập.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 \begin{enumerate}
-    \item Nếu tên đăng nhập không hợp lệ, hệ thống sẽ thông báo ``Tài khoản không tồn tại'' và yêu cầu nhập lại.
+    \item Nếu tên đăng nhập không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
     \item Nếu người dùng nhấn núi ``Gửi lại'', hệ thống sẽ gửi lại mã xác minh với thời gian chờ 30 giây.
-    \item Nếu người dùng không nhập mã xác minh hoặc mã xác minh không hợp lệ, hệ thống sẽ thông báo ``Mã xác minh không đúng'' và yêu cầu nhập lại.
-    \item Nếu người dùng không nhập mật khẩu mới hoặc mật khẩu mới không hợp lệ, hệ thống sẽ thông báo ``Mật khẩu không hợp lệ'' và yêu cầu nhập lại.
+    \item Nếu người dùng không nhập mã xác minh hoặc mã xác minh không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu người dùng không nhập mật khẩu mới hoặc mật khẩu mới không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu người dùng không nhập lại mật khẩu mới hoặc nhập lại mật khẩu mới không khớp, hệ thống thông báo lỗi và yêu cầu nhập lại.
+    \item Nếu người dùng nhập mật khẩu mới trùng với mật khẩu cũ, hệ thống thông báo lỗi và yêu cầu nhập lại.
 \end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
     \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
-    \item Mật khẩu mới phải có ít nhất 6 kí tự.
+    \item Mật khẩu mới phải có ít nhất 6 kí tự và không được trùng với mật khẩu cũ.
     \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
     \begin{itemize}
         \item Màn hình hiển thị thông báo lỗi.
