@@ -6,7 +6,7 @@ Bác sĩ thêm hồ sơ bệnh án cho bệnh nhân.
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Bác sĩ đang ở giao diện xem thông tin bệnh nhân.
+  \item Bác sĩ đang ở giao diện quản lí bệnh án.
   \item Bác sĩ nhấn nút thêm bệnh án, hệ thống chuyển đến giao diện thêm bệnh án.
   \item Bác sĩ nhập thông tin bệnh án.
   \item Bác sĩ nhấn nút thêm bệnh án, hệ thống kiểm tra thông tin và ghi nhận.
@@ -21,6 +21,7 @@ Bác sĩ thêm hồ sơ bệnh án cho bệnh nhân.
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
   \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
+  \item Bệnh nhân trong bệnh án phải tồn tại trong hệ thống.
   \item Các trường thông tin phải được nhập kiểu dữ liệu tương ứng.
   \item Các trường thông tin bao gồm:
     \begin{itemize}
@@ -40,12 +41,13 @@ Bác sĩ thêm hồ sơ bệnh án cho bệnh nhân.
     \begin{itemize}
       \item Nhập thiếu các trường thông tin bắt buộc.
       \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Bệnh nhân không tồn tại trong hệ thống.
       \item Nhập thông tin không đúng kiểu dữ liệu.
     \end{itemize}
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Bác sĩ đang ở giao diện xem thông tin bệnh nhân.
+Bác sĩ đang ở giao diện quản lí bệnh án.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}

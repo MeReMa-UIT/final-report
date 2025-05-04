@@ -9,8 +9,7 @@ Người dùng xem danh sách bệnh án (người dùng bao gồm bác sĩ và 
   \item Nếu người dùng là bác sĩ:
     \begin{itemize}
       \item Bác sĩ đang ở giao diện chính.
-      \item Bác sĩ nhấn nút quản lí bệnh án, hệ thống chuyển đến giao diện quản lí bệnh án.
-      \item Bác sĩ tìm và chọn bệnh nhân hợp lệ, hệ thống chuyển đến giao diện xem thông tin bệnh nhân (bao gồm danh sách bệnh án).
+      \item Bác sĩ nhấn nút quản lí bệnh án, hệ thống chuyển đến giao diện quản lí bệnh án (trong đó có danh sách bệnh án).
     \end{itemize}
   \item Nếu người dùng là bệnh nhân:
     \begin{itemize}
@@ -20,17 +19,12 @@ Người dùng xem danh sách bệnh án (người dùng bao gồm bác sĩ và 
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu bác sĩ chọn bệnh nhân không hợp lệ, hệ thống thông báo lỗi và yêu cầu chọn lại
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Bác sĩ phải chọn bệnh nhân hợp lệ.
   \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
-  \item Xảy ra lỗi nếu:
-    \begin{itemize}
-      \item Bác sĩ chọn bệnh nhân không hợp lệ.
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
-    \end{itemize}
+  \item Xảy ra lỗi nếu: Nhập không đúng kí tự trong bảng mã ASCII.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}

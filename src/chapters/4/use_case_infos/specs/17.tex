@@ -1,0 +1,64 @@
+\subsection{Đặc tả Use Case ``Thêm bệnh nhân''}
+
+\subsubsection{Tóm tắt}
+Nhân viên tiếp nhận thêm bệnh nhân vào hệ thống.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Nhân viên tiếp nhận đang ở giao diện chính của hệ thống.
+  \item Nhân viên tiếp nhận nhấn nút quản lí bệnh nhân, hệ thống hiển thị danh sách bệnh nhân.
+  \item Nhân viên tiếp nhận nhấn nút thêm bệnh nhân, hệ thống hiển thị giao diện thêm bệnh nhân.
+  \item Nhân viên tiếp nhận nhập thông tin bệnh nhân vào các trường thông tin.
+  \item Nhân viên tiếp nhận nhấn nút thêm bệnh nhân, hệ thống kiểm tra thông tin bệnh nhân và ghi nhận.
+  \item Hệ thống thông báo thêm bệnh nhân thành công và trở về giao diện danh sách bệnh nhân.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+  \item Nếu nhân viên tiếp nhận nhập thông tin bệnh nhân thiếu hoặc không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại, hệ thống thông báo lỗi và yêu cầu nhập lại.
+  \item Nếu nhân viên tiếp nhận nhấn nút ``Hủy'', hệ thống trở về giao diện danh sách bệnh nhân.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các thông tin nhập vào phải là kí tự thuộc bảng mã ASCII.
+  \item Các trường thông tin phải nhập đúng kiểu dữ liệu.
+  \item Các trường thông tin bao gồm:
+  \begin{itemize}
+    \item Họ và tên.
+    \item Số căn cước.
+    \item Mã BHYT.
+    \item Ngày hết hạn.
+    \item Ngày sinh.
+    \item Giới tính.
+    \item Dân tộc.
+    \item Quốc tịch.
+    \item Địa chỉ.
+    \item Số điện thoại.
+    \item Email.
+    \item Thông tin người báo tin.
+  \end{itemize}
+  \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+  \begin{itemize}
+    \item Màn hình hiển thị thông báo lỗi.
+    \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+  \end{itemize}
+  \item Xảy ra lỗi nếu:
+  \begin{itemize}
+    \item Nhập thiếu các trường thông tin bắt buộc.
+    \item Nhập không đúng kí tự trong bảng mã ASCII.
+    \item Nhập thông tin không đúng kiểu dữ liệu.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Nhân viên tiếp nhận đang ở giao diện chính của hệ thống.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thành công: Hệ thống lưu lại thông tin bệnh nhân và chuyển về giao diện danh sách bệnh nhân.
+  \item Không thành công: Thông báo lỗi.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
