@@ -1,0 +1,29 @@
+\subsection{Đặc tả Use Case ``Xóa nhân viên''}
+
+\subsubsection{Tóm tắt}
+Admin xóa nhân viên.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Admin đang ở giao diện xem chi tiết thông tin nhân viên.
+  \item Admin nhấn nút ``Xóa'', hệ thống hiển thị thông báo xác nhận xóa nhân viên.
+  \item Admin xác nhận xóa nhân viên, hệ thống ghi nhận.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+Nếu admin không xác nhận xóa, hệ thống trở về giao diện xem chi tiết thông tin nhân viên.
+
+\subsubsection{Các yêu cầu đặc biệt}
+Hệ thống phải hiện thông báo xác nhận trước khi xóa nhân viên.
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Admin đang ở giao diện xem chi tiết thông tin nhân viên.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống xóa nhân viên và quay về giao diện xem danh sách nhân viên.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
