@@ -6,36 +6,36 @@ Người dùng đăng nhập (Người dùng bao gồm admin, bác sĩ, nhân vi
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-    \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
-    \item Người dùng nhập thông tin bắt buộc vào các trường ``tên đăng nhập'' và ``mật khẩu'' rồi nhấn nút ``Đăng nhập''.
-    \item Hệ thống kiểm tra thông tin, nếu thông tin hợp lệ thì chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
+  \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
+  \item Người dùng nhập thông tin bắt buộc vào các trường ``tên đăng nhập'' và ``mật khẩu'' rồi nhấn nút ``Đăng nhập''.
+  \item Hệ thống kiểm tra thông tin, nếu thông tin hợp lệ thì chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 \begin{enumerate}
-    \item Nếu thông tin không hợp lệ, hệ thống sẽ thông báo và yêu cầu nhập lại. 
-    \item Nếu người dùng không nhập hoặc nhập thiếu thông tin bắt buộc, hệ thống sẽ thông báo và yêu cầu nhập lại.
+  \item Nếu thông tin không hợp lệ, hệ thống sẽ thông báo và yêu cầu nhập lại.
+  \item Nếu người dùng không nhập hoặc nhập thiếu thông tin bắt buộc, hệ thống sẽ thông báo và yêu cầu nhập lại.
 \end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-    \item Thông tin đăng nhập phải là kí tự trong bảng mã ASCII.
-    \item Mật khẩu phải có ít nhất 6 kí tự.
-    \item Người dùng đăng nhập bằng loại tài khoản nào thì sẽ được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản đó.
-    \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+  \item Thông tin đăng nhập phải là kí tự trong bảng mã ASCII.
+  \item Mật khẩu phải có ít nhất 6 kí tự.
+  \item Người dùng đăng nhập bằng loại tài khoản nào thì sẽ được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản đó.
+  \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
     \begin{itemize}
-        \item Màn hình hiển thị thông báo lỗi.
-        \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+      \item Màn hình hiển thị thông báo lỗi.
+      \item Các trường dữ liệu không hợp lệ được bôi đỏ.
     \end{itemize}
-    \item Yêu cầu đăng nhập:
+  \item Yêu cầu đăng nhập:
     \begin{itemize}
-        \item Điền đúng kí tự trong bảng mã ASCII cho các trường.
-        \item Điền đầy đủ thông tin bắt buộc.
+      \item Điền đúng kí tự trong bảng mã ASCII cho các trường.
+      \item Điền đầy đủ thông tin bắt buộc.
     \end{itemize}
-    \item Xảy ra lỗi nếu:
+  \item Xảy ra lỗi nếu:
     \begin{itemize}
-        \item Nhập thiếu các trường thông tin bắt buộc.
-        \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập thiếu các trường thông tin bắt buộc.
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
     \end{itemize}
 \end{itemize}
 
@@ -44,8 +44,8 @@ Người dùng đang ở giao diện đăng nhập.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-    \item Thực hiện thành công: Người dùng được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
-    \item Thực hiện không thành công: Thông báo.
+  \item Thực hiện thành công: Người dùng được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
+  \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 
 \subsubsection{Điểm mở rộng}
