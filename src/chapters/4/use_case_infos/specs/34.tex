@@ -1,0 +1,49 @@
+\subsection{Đặc tả Use Case ``Cập nhật lịch hẹn''}
+
+\subsubsection{Tóm tắt}
+Bệnh nhân cập nhật lịch hẹn.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
+  \item Bệnh nhân nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật lịch hẹn.
+  \item Bệnh nhân nhập các thông tin lịch hẹn cần cập nhật.
+  \item Hệ thống kiểm tra và ghi nhận.
+  \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết lịch hẹn.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+  \item Nếu bệnh nhân nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết đơn thuốc.
+  \item Nếu bệnh nhân nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+  \item Các thông tin phải được nhập đúng kiểu dữ liệu.
+  \item Lịch hẹn mới không được trùng với lịch hẹn đã có trong hệ thống.
+  \item Các thông tin có thể cập nhật bao gồm:
+    \begin{itemize}
+      \item Ngày tháng năm hẹn.
+      \item Giờ hẹn dự kiến.
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập không đúng kiểu dữ liệu.
+      \item Lịch hẹn đã có trong hệ thống.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống cập nhật thông tin lịch hẹn và quay về giao diện xem chi tiết lịch hẹn.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}

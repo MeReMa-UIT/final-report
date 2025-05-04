@@ -1,0 +1,45 @@
+\subsection{Đặc tả Use Case ``Tra cứu lịch hẹn''}
+
+\subsubsection{Tóm tắt}
+Bệnh nhân tra cứu lịch hẹn.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Bệnh nhân đang ở giao diện chính của hệ thống.
+  \item Bệnh nhân nhấn nút quản lí lịch hẹn, hệ thống hiển thị giao diện quản lí lịch hẹn.
+  \item Bệnh nhân nhập thông tin tìm kiếm lịch hẹn vào thanh tìm kiếm.
+  \item Bệnh nhân nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+Nếu bệnh nhân nhập thông tin tìm kiếm không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+  \item Thông tin tìm kiếm phải đúng kiểu dữ liệu.
+  \item Các thông tin tìm kiếm bao gồm:
+    \begin{itemize}
+      \item Ngày tháng năm hẹn.
+      \item Giờ dự kiến.
+      \item Trạng thái.
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Thông tin tìm kiếm không đúng kiểu dữ liệu.
+      \item Không tìm thấy lịch hẹn khớp với thông tin tìm kiếm.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Người dùng đang ở giao diện chính của hệ thống.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
