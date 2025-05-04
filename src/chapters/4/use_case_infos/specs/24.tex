@@ -1,0 +1,45 @@
+\subsection{Đặc tả Use Case ``Tra cứu đơn thuốc đã lập''}
+
+\subsubsection{Tóm tắt}
+Bác sĩ tra cứu đơn thuốc đã lập.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Bác sĩ đang ở giao diện chính của hệ thống.
+  \item Bác sĩ nhấn nút quản lí đơn thuốc, hệ thống hiển thị giao diện quản lí đơn thuốc.
+  \item Bác sĩ nhập thông tin tìm kiếm đơn thuốc vào thanh tìm kiếm.
+  \item Bác sĩ nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+Nếu bác sĩ nhập thông tin tìm kiếm không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+  \item Thông tin tìm kiếm phải đúng kiểu dữ liệu.
+  \item Các thông tin tìm kiếm bao gồm:
+    \begin{itemize}
+      \item Các thông tin bệnh nhân (xem use case ``Tra cứu bệnh nhân'').
+      \item Ngày lập đơn thuốc.
+      \item Ngày phát thuốc.
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Thông tin tìm kiếm không đúng kiểu dữ liệu.
+      \item Không tìm thấy đơn thuốc khớp với thông tin tìm kiếm.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Người dùng đang ở giao diện chính của hệ thống.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}

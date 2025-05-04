@@ -1,0 +1,58 @@
+\subsection{Đặc tả Use Case ``Cập nhật đơn thuốc''}
+
+\subsubsection{Tóm tắt}
+Bác sĩ cập nhật đơn thuốc.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Bác sĩ đang ở giao diện xem chi tiết đơn thuốc.
+  \item Bác sĩ nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật đơn thuốc.
+  \item Bác sĩ nhập các thông tin đơn thuốc cần cập nhật.
+  \item Hệ thống kiểm tra và ghi nhận.
+  \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết đơn thuốc.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+  \item Nếu bác sĩ nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết đơn thuốc.
+  \item Nếu bác sĩ nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+  \item Các thông tin phải được nhập đúng kiểu dữ liệu.
+  \item Các thông tin có thể cập nhật bao gồm:
+    \begin{itemize}
+      \item Thuốc bảo hiểm.
+      \item Ghi chú.
+      \item Ngày phát thuốc.
+      \item Danh sách các loại thuốc:
+      \begin{itemize}
+        \item Tên thuốc.
+        \item Liều lượng.
+        \item Đơn vị tính.
+        \item Thời gian sử dụng.
+        \item Số lượng sử dụng.
+        \item Tần suất sử dụng.
+        \item Cách dùng.
+      \end{itemize}
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập không đúng kiểu dữ liệu.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Bác sĩ đang ở giao diện xem chi tiết đơn thuốc.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống cập nhật thông tin đơn thuốc và quay về giao diện xem chi tiết đơn thuốc.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
