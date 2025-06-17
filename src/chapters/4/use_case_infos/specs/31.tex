@@ -1,32 +1,38 @@
-\subsection{Đặc tả Use Case ``Tra cứu lịch hẹn''}
+\subsection{Đặc tả Use Case ``Cập nhật lịch hẹn''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân tra cứu lịch hẹn.
+Bệnh nhân cập nhật lịch hẹn.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Bệnh nhân đang ở giao diện chính của hệ thống.
-  \item Bệnh nhân nhấn nút quản lí lịch hẹn, hệ thống hiển thị giao diện quản lí lịch hẹn.
-  \item Bệnh nhân nhập thông tin tìm kiếm lịch hẹn vào thanh tìm kiếm.
-  \item Bệnh nhân nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+  \item Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
+  \item Bệnh nhân nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật lịch hẹn.
+  \item Bệnh nhân nhập các thông tin lịch hẹn cần cập nhật.
+  \item Hệ thống kiểm tra và ghi nhận.
+  \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết lịch hẹn.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu bệnh nhân nhập thông tin tìm kiếm không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\begin{enumerate}
+  \item Nếu bệnh nhân nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết đơn thuốc.
+  \item Nếu bệnh nhân nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
   \item Thông tin nhập vào là ngày tháng năm trong tương lai gần.
-  \item Xảy ra lỗi nếu: Không tìm thấy lịch hẹn khớp với thông tin tìm kiếm.
+  \item Lịch hẹn mới không được trùng với lịch hẹn đã có trong hệ thống.
+  \item Các thông tin có thể cập nhật bao gồm: Ngày hẹn.
+  \item Xảy ra lỗi nếu: Lịch hẹn đã có trong hệ thống.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện chính của hệ thống.
+Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
+  \item Thực hiện thành công: Hệ thống cập nhật thông tin lịch hẹn và quay về giao diện xem chi tiết lịch hẹn.
   \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 

@@ -1,44 +1,45 @@
-\subsection{Đặc tả Use Case ``Tra cứu đơn thuốc đã lập''}
+\subsection{Đặc tả Use Case ``Xem chi tiết thông tin đơn thuốc''}
 
 \subsubsection{Tóm tắt}
-Bác sĩ tra cứu đơn thuốc đã lập.
+Người dùng xem chi tiết thông tin đơn thuốc (người dùng bao gồm bác sĩ và bệnh nhân).
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Bác sĩ đang ở giao diện chính của hệ thống.
-  \item Bác sĩ nhấn nút quản lí đơn thuốc, hệ thống hiển thị giao diện quản lí đơn thuốc.
-  \item Bác sĩ nhập thông tin tìm kiếm đơn thuốc vào thanh tìm kiếm.
-  \item Bác sĩ nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+  \item Người dùng đang ở giao diện xem danh sách đơn thuốc.
+  \item Người dùng tra cứu và chọn đơn thuốc trong danh sách, hệ thống hiển thị thông tin chi tiết đơn thuốc.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu bác sĩ nhập thông tin tìm kiếm không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+Xem use case ``Tra cứu đơn thuốc''.
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
-  \item Thông tin tìm kiếm phải đúng kiểu dữ liệu.
-  \item Các thông tin tìm kiếm bao gồm:
+  \item Các thông tin bao gồm:
     \begin{itemize}
-      \item Các thông tin bệnh nhân (xem use case ``Tra cứu bệnh nhân'').
+      \item Thuốc bảo hiểm.
+      \item Ghi chú.
       \item Ngày lập đơn thuốc.
       \item Ngày phát thuốc.
-    \end{itemize}
-  \item Xảy ra lỗi nếu:
-    \begin{itemize}
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
-      \item Thông tin tìm kiếm không đúng kiểu dữ liệu.
-      \item Không tìm thấy đơn thuốc khớp với thông tin tìm kiếm.
+      \item Danh sách các loại thuốc:
+      \begin{itemize}
+        \item Tên thuốc.
+        \item Liều lượng.
+        \item Đơn vị tính.
+        \item Thời gian sử dụng.
+        \item Số lượng sử dụng.
+        \item Tần suất sử dụng.
+        \item Cách dùng.
+      \end{itemize}
     \end{itemize}
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện chính của hệ thống.
+Người dùng đang ở giao diện xem danh sách đơn thuốc.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
+  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết đơn thuốc.
   \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 

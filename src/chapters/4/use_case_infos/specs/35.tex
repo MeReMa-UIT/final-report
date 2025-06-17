@@ -1,32 +1,22 @@
-\subsection{Đặc tả Use Case ``Hủy lịch hẹn''}
+\subsection{Đặc tả Use Case ``Phân quyền nhân viên''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân hủy lịch hẹn.
+Admin phân quyền cho nhân viên.
 
 \subsubsection{Dòng sự kiện}
-\paragraph{\textbf{Dòng sự kiện chính}}
-\begin{enumerate}
-  \item Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
-  \item Bệnh nhân nhấn nút ``Hủy lịch hẹn'', hệ thống hiển thị thông báo xác nhận.
-  \item Bệnh nhân xác nhận hủy lịch hẹn, hệ thống cập nhật trạng thái lịch hẹn thành đã hủy.
-\end{enumerate}
+\paragraph{\textbf{Dòng sự kiện chính:}}
+Khi thêm hoặc sửa thông tin nhân viên, admin có thể phân quyền cho nhân viên qua trường ``Chức danh''.
 
-\paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu bệnh nhân không xác nhận hủy lịch hẹn, hệ thống sẽ trở về giao diện xem chi tiết lịch hẹn.
+\paragraph{\textbf{Các dòng sự kiện khác:}}
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-\begin{itemize}
-  \item Hệ thống phải hiện thông báo xác nhận trước khi hủy lịch hẹn.
-  \item Chỉ có lịch hẹn với trạng thái ``Đang chờ'' mới có thể hủy.
-\end{itemize}
+Admin phải phân quyền phù hợp với nhân viên.
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
+Admin đang thêm hoặc cập nhật thông tin nhân viên.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thực hiện thành công: Hệ thống cập nhật trạng thái lịch hẹn thành ``Đã hủy''.
-  \item Thực hiện không thành công: Thông báo.
-\end{itemize}
+Admin đã thêm hoặc cập nhật thông tin nhân viên cùng với phân quyền phù hợp.
 
 \subsubsection{Điểm mở rộng}
