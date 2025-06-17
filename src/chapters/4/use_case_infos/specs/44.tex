@@ -1,0 +1,42 @@
+\subsection{Đặc tả Use Case ``Tạo báo cáo thống kê số lượng bệnh án tiếp nhận''}
+
+\subsubsection{Tóm tắt}
+Admin hoặc hệ thống tạo báo cáo thống kê số lượng bệnh án tiếp nhận.
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính:}}
+\begin{enumerate}
+  \item Nếu là admin:
+  \begin{itemize}
+    \item Admin đang ở giao diện quản lí báo cáo.
+    \item Admin nhấn nút ``Tạo báo cáo'', hệ thống chuyển sang giao diện tạo báo cáo.
+    \item Admin nhập các thông tin cần thiết.
+    \item Hệ thống kiểm tra và tạo báo cáo theo yêu cầu.
+  \end{itemize}
+  \item Nếu là hệ thống: Tự động tạo báo cáo theo lịch trình đã định sẵn.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác:}}
+\begin{enumerate}
+  \item Nếu admin nhấn nút hủy, hệ thống sẽ quay về giao diện quản lí báo cáo.
+  \item Nếu admin không nhập đủ thông tin cần thiết, hệ thống thông báo lỗi và yêu cầu nhập lại.
+  \item Nội dung báo cáo:
+  \begin{itemize}
+    \item Thời gian bắt đầu và thời gian kết thúc báo cáo.
+    \item Số lượng bệnh án tiếp nhận trong khoảng thời gian đã chọn.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Thông tin nhập vào là thời gian bắt đầu và thời gian kết thúc (định dạng ngày).
+  \item Hệ thống phải tự động tạo báo cáo theo yêu cầu của admin hoặc theo lịch trình đã định.
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Admin đang ở giao diện quản lí báo cáo.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+Hệ thống đã tạo báo cáo thành công và chuyển đến giao diện xem chi tiết báo cáo vừa tạo.
+
+\subsubsection{Điểm mở rộng}

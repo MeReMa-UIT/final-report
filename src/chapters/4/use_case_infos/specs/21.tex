@@ -1,0 +1,57 @@
+\subsection{Đặc tả Use Case ``Cập nhật thông tin bệnh nhân''}
+
+\subsubsection{Tóm tắt}
+Người dùng cập nhật thông tin bệnh nhân (người dùng bao gồm bác sĩ và nhân viên tiếp nhận).
+
+\subsubsection{Dòng sự kiện}
+\paragraph{\textbf{Dòng sự kiện chính}}
+\begin{enumerate}
+  \item Người dùng đang ở giao diện xem chi tiết thông tin bệnh nhân.
+  \item Người dùng nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật thông tin bệnh nhân.
+  \item Người dùng nhập các thông tin bệnh nhân cần cập nhật.
+  \item Hệ thống kiểm tra và ghi nhận.
+  \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết thông tin bệnh nhân.
+\end{enumerate}
+
+\paragraph{\textbf{Các dòng sự kiện khác}}
+\begin{enumerate}
+  \item Nếu người dùng nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết thông tin bệnh nhân.
+  \item Nếu Người dùng nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
+
+\subsubsection{Các yêu cầu đặc biệt}
+\begin{itemize}
+  \item Các kí tự nhập vào phải nằm trong bảng mã ASCII.
+  \item Các thông tin phải được nhập đúng kiểu dữ liệu.
+  \item Các thông tin có thể cập nhật bao gồm:
+    \begin{itemize}
+      \item Họ và tên.
+      \item Số căn cước.
+      \item Mã BHYT.
+      \item Ngày hết hạn.
+      \item Ngày sinh.
+      \item Giới tính.
+      \item Dân tộc.
+      \item Quốc tịch.
+      \item Địa chỉ.
+      \item Số điện thoại.
+      \item Email.
+      \item Thông tin người báo tin.
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập không đúng kiểu dữ liệu.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
+Người dùng đang ở giao diện xem chi tiết thông tin bệnh nhân.
+
+\subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
+\begin{itemize}
+  \item Thực hiện thành công: Hệ thống cập nhật thông tin bệnh nhân và quay về giao diện xem chi tiết thông tin bệnh nhân.
+  \item Thực hiện không thành công: Thông báo.
+\end{itemize}
+
+\subsubsection{Điểm mở rộng}
