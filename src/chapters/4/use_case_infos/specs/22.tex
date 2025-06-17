@@ -1,41 +1,56 @@
-\subsection{Đặc tả Use Case ``Xem chi tiết thông tin đơn thuốc''}
+\subsection{Đặc tả Use Case ``Cập nhật đơn thuốc''}
 
 \subsubsection{Tóm tắt}
-Người dùng xem chi tiết thông tin đơn thuốc (người dùng bao gồm bác sĩ và bệnh nhân).
+Bác sĩ cập nhật đơn thuốc.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Người dùng đang ở giao diện xem danh sách đơn thuốc.
-  \item Người dùng chọn đơn thuốc trong danh sách, hệ thống hiển thị thông tin chi tiết đơn thuốc.
+  \item Bác sĩ đang ở giao diện xem danh sách đơn thuốc.
+  \item Bác sĩ nhấn nút ``Update'', hệ thống chuyển sang giao diện cập nhật đơn thuốc.
+  \item Bác sĩ nhập các thông tin đơn thuốc cần cập nhật.
+  \item Hệ thống kiểm tra và ghi nhận.
+  \item Hệ thống thông báo thành công và quay về giao diện xem danh sách đơn thuốc.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Không có.
+\begin{enumerate}
+  \item Nếu bác sĩ nhấn nút ``X'', hệ thống quay về giao diện xem danh sách đơn thuốc.
+  \item Nếu bác sĩ nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Các thông tin bao gồm:
+  \item Các kí tự nhập vào phải là kí tự Unicode.
+  \item Các thông tin phải được nhập đúng kiểu dữ liệu.
+  \item Các thông tin có thể cập nhật bao gồm:
     \begin{itemize}
-      \item Tên thuốc.
-      \item Tên thường gọi.
-      \item Liều lượng.
-      \item Loại thuốc.
-      \item Đường dùng.
-      \item Nhà sản xuất.
-      \item Liều dùng.
-      \item Thời lượng dùng.
-      \item Tần suất dùng.
-      \item Cách dùng.
+      \item Thuốc bảo hiểm.
+      \item Ghi chú.
+      \item Trạng thái (đã nhận).
+      \item Thông tin các loại thuốc:
+      \begin{itemize}
+        \item Tên thuốc.
+        \item Đơn vị tính.
+        \item Thời gian sử dụng.
+        \item Số lượng sử dụng.
+        \item Tần suất sử dụng.
+        \item Cách dùng.
+      \end{itemize}
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Nhập không đúng kí tự Unicode.
+      \item Nhập không đúng kiểu dữ liệu.
     \end{itemize}
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện xem danh sách đơn thuốc.
+Bác sĩ đang ở giao diện xem danh sách đơn thuốc.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết đơn thuốc.
+  \item Thực hiện thành công: Hệ thống cập nhật thông tin đơn thuốc và quay về giao diện xem danh sách đơn thuốc.
   \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 

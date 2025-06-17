@@ -1,38 +1,38 @@
-\subsection{Đặc tả Use Case ``Xem chi tiết thông tin nhân viên''}
+\subsection{Đặc tả Use Case ``Lập báo cáo thống kê số lượng bệnh án tiếp nhận''}
 
 \subsubsection{Tóm tắt}
-Admin xem chi tiết thông tin nhân viên.
-\textbf{Lưu ý:} Nhân viên có thể xem thông tin chi tiết của mình qua use case ``Xem thông tin tài khoản''.
+Admin tạo báo cáo thống kê số lượng bệnh án tiếp nhận.
 
 \subsubsection{Dòng sự kiện}
-\paragraph{\textbf{Dòng sự kiện chính}}
+\paragraph{\textbf{Dòng sự kiện chính:}}
 \begin{enumerate}
-  \item Admin đang ở giao diện xem danh sách nhân viên.
-  \item Admin tra cứu và chọn một nhân viên trong danh sách, hệ thống hiển thị thông tin chi tiết của nhân viên.
+  \item Admin đang ở giao diện chính của hệ thống.
+  \item Admin nhấn nút ``Statistics'', hệ thống hiển thị giao diện quản lí báo cáo.
+  \item Admin nhập các thông tin cần thiết.
+  \item Hệ thống kiểm tra và tạo báo cáo theo yêu cầu.
 \end{enumerate}
 
-\paragraph{\textbf{Các dòng sự kiện khác}}
-Xem use case ``Tra cứu nhân viên''.
+\paragraph{\textbf{Các dòng sự kiện khác:}}
+\begin{enumerate}
+  \item Nội dung báo cáo:
+    \begin{itemize}
+      \item Thời gian.
+      \item Số lượng bệnh án tiếp nhận.
+      \item Số lượng bệnh án theo bác sĩ.
+      \item Số lượng bệnh án theo chẩn đoán
+    \end{itemize}
+\end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Các thông tin bao gồm:
-    \begin{itemize}
-      \item Họ và tên.
-      \item Ngày tháng năm sinh.
-      \item Giới tính.
-      \item Khoa.
-      \item Mã nhân viên.
-    \end{itemize}
+  \item Thông tin nhập vào là thời gian và khoảng thời gian.
+  \item Hệ thống phải tự động tạo báo cáo theo yêu cầu của admin.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Admin đang ở giao diện xem danh sách nhân viên.
+Admin đang ở giao diện chính của hệ thống.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết nhân viên.
-  \item Thực hiện không thành công: Thông báo.
-\end{itemize}
+Hệ thống đã tạo báo cáo thành công và hiển thị.
 
 \subsubsection{Điểm mở rộng}

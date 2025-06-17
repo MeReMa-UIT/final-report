@@ -1,43 +1,41 @@
-\subsection{Đặc tả Use Case ``Xem danh sách đơn thuốc''}
+\subsection{Đặc tả Use Case ``Xem chi tiết thông tin đơn thuốc''}
 
 \subsubsection{Tóm tắt}
-Người dùng xem danh sách đơn thuốc (người dùng bao gồm bác sĩ và bệnh nhân).
+Người dùng xem chi tiết thông tin đơn thuốc (người dùng bao gồm bác sĩ và bệnh nhân).
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Nếu người dùng là bác sĩ:
-    \begin{itemize}
-      \item Nếu bác sĩ đang ở giao diện xem thông tin bệnh nhân: hệ thống hiển thị danh sách đơn thuốc của bệnh nhân.
-      \item Nếu bác sĩ đang ở giao diện xem chi tiết bệnh án:
-        \begin{itemize}
-          \item Bác sĩ chuyển sang tab ``Prescriptions''.
-          \item Hệ thống hiển thị đơn thuốc của bệnh án đó.
-        \end{itemize}
-    \end{itemize}
-  \item Nếu người dùng là bệnh nhân:
-    \begin{itemize}
-      \item Bệnh nhân đang ở giao diện chính.
-      \item Bệnh nhân nhấn nút ``Prescriptions'', hệ thống chuyển đến giao diện xem danh sách đơn thuốc.
-      \item Bệnh nhân chọn bệnh nhân cần xem đơn thuốc, hệ thống hiển thị danh sách đơn thuốc của bệnh nhân đó.
-    \end{itemize}
+  \item Người dùng đang ở giao diện xem danh sách đơn thuốc.
+  \item Người dùng chọn đơn thuốc trong danh sách, hệ thống hiển thị thông tin chi tiết đơn thuốc.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-Không có.
+\begin{itemize}
+  \item Các thông tin bao gồm:
+    \begin{itemize}
+      \item Tên thuốc.
+      \item Tên thường gọi.
+      \item Liều lượng.
+      \item Loại thuốc.
+      \item Đường dùng.
+      \item Nhà sản xuất.
+      \item Liều dùng.
+      \item Thời lượng dùng.
+      \item Tần suất dùng.
+      \item Cách dùng.
+    \end{itemize}
+\end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-\begin{itemize}
-  \item Nếu người dùng là bác sĩ: Bác sĩ đang ở giao diện xem thông tin bệnh nhân hoặc giao diện xem chi tiết bệnh án.
-  \item Nếu người dùng là bệnh nhân: Bệnh nhân đang ở giao diện chính.
-\end{itemize}
+Người dùng đang ở giao diện xem danh sách đơn thuốc.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị danh sách đơn thuốc của bệnh nhân.
+  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết đơn thuốc.
   \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 

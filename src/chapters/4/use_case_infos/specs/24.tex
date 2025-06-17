@@ -1,42 +1,25 @@
-\subsection{Đặc tả Use Case ``Lập lịch hẹn''}
+\subsection{Đặc tả Use Case ``Phát số thứ tự''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân tạo lịch hẹn.
+Hệ thống phát số thứ tự cho bệnh nhân.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
-\begin{enumerate}
-  \item Bệnh nhân đang ở giao diện chính.
-  \item Bệnh nhân nhấn nút ``Schedules'', hệ thống chuyển sang giao diện quản lí lịch hẹn.
-  \item Bệnh nhân nhấn nút ``Book Schedule'', hệ thống chuyển sang giao diện lập lịch hẹn.
-  \item Bệnh nhân nhập thông tin lịch hẹn.
-  \item Bệnh nhân nhấn nút tạo lịch hẹn, hệ thống kiểm tra thông tin lịch hẹn và ghi nhận.
-\end{enumerate}
+Khi bệnh nhân lập hoặc cập nhật lịch hẹn, hệ thống tự động phát số thứ tự cho bệnh nhân và thêm vào trường số thứ tự của lịch hẹn đó.
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-\begin{enumerate}
-  \item Nếu bệnh nhân nhấn nút ``Cancel'', hệ thống quay về giao diện quản lí lịch hẹn.
-  \item Nếu bệnh nhân nhập lịch hẹn không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
-\end{enumerate}
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Thông tin nhập vào là ngày tháng năm trong tương lai gần và loại lịch hẹn.
-  \item Lịch hẹn không được trùng với lịch hẹn đã có trong hệ thống.
-  \item Xảy ra lỗi nếu:
-  \begin{itemize}
-    \item Nhập thiếu các trường thông tin bắt buộc.
-    \item Nhập lịch hẹn trùng với lịch hẹn đã có trong hệ thống.
-  \end{itemize}
+  \item Số thứ tự được phát tự động theo thứ tự thời gian lập lịch hẹn.
+  \item Số thứ tự không được trùng lặp.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Bệnh nhân đang ở giao diện chính.
+Bệnh nhân vừa lập hoặc cập nhật lịch hẹn thành công.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thành công: Hệ thống lưu lại lịch hẹn và chuyển về giao diện quản lí lịch hẹn.
-  \item Không thành công: Thông báo.
-\end{itemize}
+Lịch hẹn của bệnh nhân đã được cập nhật với số thứ tự mới.
 
 \subsubsection{Điểm mở rộng}

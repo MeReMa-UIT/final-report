@@ -1,27 +1,42 @@
-\subsection{Đặc tả Use Case ``Xem danh sách bệnh nhân''}
+\subsection{Đặc tả Use Case ``Xem chi tiết thông tin bệnh nhân''}
 
 \subsubsection{Tóm tắt}
-Người dùng xem danh sách bệnh nhân (người dùng bao gồm bác sĩ và nhân viên tiếp nhận).
+Người dùng xem chi tiết thông tin bệnh nhân (người dùng bao gồm bác sĩ và nhân viên tiếp nhận).
+\textbf{Lưu ý:} Bệnh nhân có thể xem thông tin chi tiết của mình qua use case ``Xem thông tin tài khoản''.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
   \item Người dùng đang ở giao diện chính.
   \item Người dùng nhấn nút ``Patients'', hệ thống chuyển đến giao diện quản lí bệnh nhân, trong đó có danh sách bệnh nhân.
+  \item Người dùng tra cứu và/hoặc chọn một bệnh nhân trong danh sách, hệ thống hiển thị thông tin chi tiết của bệnh nhân.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Không có.
+Xem use case ``Tra cứu bệnh nhân''.
 
 \subsubsection{Các yêu cầu đặc biệt}
-Không có.
+\begin{itemize}
+  \item Các thông tin bao gồm:
+    \begin{itemize}
+      \item Họ và tên.
+      \item Mã BHYT.
+      \item Ngày hết hạn.
+      \item Ngày sinh.
+      \item Giới tính.
+      \item Dân tộc.
+      \item Quốc tịch.
+      \item Địa chỉ.
+      \item Thông tin người báo tin.
+    \end{itemize}
+\end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện chính của hệ thống.
+Người dùng đang ở giao diện xem danh sách bệnh nhân.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị danh sách bệnh nhân.
+  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết bệnh nhân.
   \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 

@@ -1,28 +1,25 @@
-\subsection{Đặc tả Use Case ``Xem danh sách lịch hẹn''}
+\subsection{Đặc tả Use Case ``Đánh dấu hoàn thành lịch hẹn''}
 
 \subsubsection{Tóm tắt}
-Người dùng xem danh sách lịch hẹn. (Người dùng bao gồm bệnh nhân và nhân viên tiếp nhận).
+Nhân viên tiếp nhận đánh dấu hoàn thành lịch hẹn.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Người dùng đang ở giao diện chính.
-  \item Người dùng nhấn nút ``Schedules'', hệ thống chuyển đến giao diện quản lí lịch hẹn (trong đó có danh sách lịch hẹn).
+  \item Nhân viên tiếp nhận đang ở giao diện quản lí lịch hẹn.
+  \item Nhân viên tiếp nhận nhấn ``Completed'' cho các lịch hẹn đã hoàn thành.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu người dùng nhấn vào các nút lọc, hệ thống sẽ lọc danh sách lịch hẹn theo các tiêu chí đã chọn (ví dụ: theo trạng thái).
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-Hệ thống phải lọc danh sách lịch hẹn theo các tiêu chí đã chọn và hiển thị đúng thông tin của từng lịch hẹn.
+Nhân viên tiếp nhận chỉ đánh dấu hoàn thành khi bệnh nhân đã đến khám.
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện chính của hệ thống.
+Nhân viên tiếp nhận đang ở giao diện quản lí lịch hẹn.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị danh sách lịch hẹn của bệnh nhân.
-  \item Thực hiện không thành công: Thông báo.
-\end{itemize}
+Hệ thống hiển thị trạng thái lịch hẹn đã hoàn thành.
 
 \subsubsection{Điểm mở rộng}

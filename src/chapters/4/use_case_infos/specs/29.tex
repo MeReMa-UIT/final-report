@@ -1,53 +1,22 @@
-\subsection{Đặc tả Use Case ``Cập nhật thông tin nhân viên''}
+\subsection{Đặc tả Use Case ``Phân quyền nhân viên''}
 
 \subsubsection{Tóm tắt}
-Admin cập nhật thông tin nhân viên.
+Admin phân quyền cho nhân viên.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính:}}
-\begin{enumerate}
-  \item Admin đang ở giao diện xem chi tiết thông tin nhân viên.
-  \item Admin nhấn nút ``Edit Info'', hệ thống chuyển sang giao diện cập nhật thông tin nhân viên.
-  \item Admin nhập thông tin cần cập nhật vào các trường tương ứng.
-  \item Admin nhấn nút ``Update'', hệ thống kiểm tra thông tin và ghi nhận.
-\end{enumerate}
+Khi thêm nhân viên, admin có thể phân quyền cho nhân viên qua trường ``Chức danh''.
 
 \paragraph{\textbf{Các dòng sự kiện khác:}}
-\begin{enumerate}
-  \item Nếu admin nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
-  \item Nếu admin nhấn nút ``Cancel'', hệ thống quay lại giao diện xem thông tin nhân viên.
-\end{enumerate}
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-\begin{itemize}
-  \item Thông tin nhập vào phải là kí tự Unicode.
-  \item Các trường thông tin phải được nhập kiểu dữ liệu tương ứng.
-  \item Các trường thông tin có thể cập nhật:
-    \begin{itemize}
-      \item Họ và tên.
-      \item Ngày tháng năm sinh.
-      \item Giới tính.
-      \item Khoa.
-    \end{itemize}
-  \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
-    \begin{itemize}
-      \item Màn hình hiển thị thông báo lỗi.
-      \item Các trường dữ liệu không hợp lệ được bôi đỏ.
-    \end{itemize}
-  \item Xảy ra lỗi nếu:
-    \begin{itemize}
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
-      \item Nhập sai định dạng thông tin.
-    \end{itemize}
-\end{itemize}
+Admin phải phân quyền phù hợp với nhân viên.
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Admin đang ở giao diện xem chi tiết thông tin nhân viên.
+Admin đang thêm thông tin nhân viên.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thành công: Admin được chuyển đến giao diện xem chi tiết thông tin nhân viên.
-  \item Thất bại: Thông báo.
-\end{itemize}
+Admin đã thêm thông tin nhân viên cùng với phân quyền phù hợp.
 
 \subsubsection{Điểm mở rộng}

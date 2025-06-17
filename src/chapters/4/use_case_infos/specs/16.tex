@@ -1,44 +1,28 @@
-\subsection{Đặc tả Use Case ``Tra cứu bệnh nhân''}
+\subsection{Đặc tả Use Case ``Xem danh sách bệnh nhân''}
 
 \subsubsection{Tóm tắt}
-Người dùng tra cứu bệnh nhân (người dùng bao gồm bác sĩ và nhân viên tiếp nhận).
+Người dùng xem danh sách bệnh nhân (người dùng bao gồm bác sĩ và nhân viên tiếp nhận).
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Người dùng đang ở giao diện chính của hệ thống.
-  \item Người dùng nhấn nút ``Patients'', hệ thống hiển thị giao diện quản lí bệnh nhân.
-  \item Người dùng nhập thông tin tìm kiếm bệnh nhân vào thanh tìm kiếm.
-  \item Người dùng nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+  \item Người dùng đang ở giao diện chính.
+  \item Người dùng nhấn nút ``Patients'', hệ thống chuyển đến giao diện quản lí bệnh nhân, trong đó có danh sách bệnh nhân.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-\begin{itemize}
-  \item Thông tin tìm kiếm phải đúng kiểu dữ liệu và không được để trống.
-  \item Các thông tin có thể tìm kiếm bao gồm:
-    \begin{itemize}
-      \item Họ và tên.
-      \item Ngày sinh.
-      \item Giới tính.
-    \end{itemize}
-  \item Xảy ra lỗi nếu:
-    \begin{itemize}
-      \item Thông tin tìm kiếm không đúng kiểu dữ liệu.
-      \item Thông tin tìm kiểm để trống.
-      \item Không tìm thấy bệnh nhân khớp với thông tin tìm kiếm.
-    \end{itemize}
-\end{itemize}
+Không có.
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
 Người dùng đang ở giao diện chính của hệ thống.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
-  \item Thực hiện không thành công: Hệ thống hiển thị kết quả trống.
+  \item Thực hiện thành công: Hệ thống hiển thị danh sách bệnh nhân.
+  \item Thực hiện không thành công: Thông báo.
 \end{itemize}
 
 \subsubsection{Điểm mở rộng}
