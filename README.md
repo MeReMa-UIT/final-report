@@ -1,4 +1,4 @@
-# MeReMA - Final Report
+# MeReMa - Final Report
 Our final report for SE104 - UIT, written in LaTeX
 
 ## Devs
