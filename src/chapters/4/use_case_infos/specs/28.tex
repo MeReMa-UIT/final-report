@@ -1,33 +1,61 @@
-\subsection{Đặc tả Use Case ``Tra cứu lịch hẹn''}
+\subsection{Đặc tả Use Case ``Thêm nhân viên mới''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân tra cứu lịch hẹn.
+Admin thêm nhân viên mới vào hệ thống.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Bệnh nhân đang ở giao diện chính của hệ thống.
-  \item Bệnh nhân nhấn nút quản lí lịch hẹn, hệ thống hiển thị giao diện quản lí lịch hẹn.
-  \item Bệnh nhân nhập thông tin tìm kiếm lịch hẹn vào thanh tìm kiếm.
-  \item Bệnh nhân nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
+  \item Admin đang ở giao diện chính.
+  \item Admin nhấn nút ``Staffs'', hệ thống chuyển sang giao diện quản lí nhân viên.
+  \item Admin nhấn nút ``Register Staff'', hệ thống chuyển sang giao diện thêm nhân viên.
+  \item Admin nhập thông tin nhân viên mới vào các trường thông tin.
+  \item Admin nhấn nút ``Register'', hệ thống kiểm tra thông tin nhân viên mới và ghi nhận.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-Nếu bệnh nhân nhập thông tin tìm kiếm không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\begin{enumerate}
+  \item Nếu Admin nhấn nút ``Cancel'', hệ thống sẽ quay về giao diện quản lí nhân viên.
+  \item Nếu Admin nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
+\end{enumerate}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Thông tin nhập vào là ngày tháng năm trong tương lai gần.
-  \item Xảy ra lỗi nếu: Không tìm thấy lịch hẹn khớp với thông tin tìm kiếm.
+  \item Các thông tin nhập vào phải là kí tự Unicode.
+  \item Các trường thông tin phải nhập đúng kiểu dữ liệu.
+  \item Nhân viên mới không được trùng với nhân viên đã có trong hệ thống.
+  \item Các trường thông tin bao gồm:
+  \begin{itemize}
+    \item Chức danh.
+    \item Họ và tên.
+    \item Số căn cước.
+    \item Ngày tháng năm sinh.
+    \item Giới tính.
+    \item Số điện thoại.
+    \item Email.
+    \item Khoa.
+  \end{itemize}
+  \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
+  \begin{itemize}
+    \item Màn hình hiển thị thông báo lỗi.
+    \item Các trường dữ liệu không hợp lệ được bôi đỏ.
+  \end{itemize}
+  \item Xảy ra lỗi nếu:
+  \begin{itemize}
+    \item Nhập thiếu các trường thông tin bắt buộc.
+    \item Nhập không đúng kí tự Unicode.
+    \item Nhập thông tin không đúng kiểu dữ liệu.
+    \item Nhập nhân viên đã có trong hệ thống.
+  \end{itemize}
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Người dùng đang ở giao diện chính của hệ thống.
+Admin đang ở giao diện chính của hệ thống.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
-  \item Thực hiện không thành công: Thông báo.
+  \item Thành công: Hệ thống lưu lại thông tin nhân viên và chuyển về giao diện quản lí nhân viên.
+  \item Không thành công: Thông báo lỗi.
 \end{itemize}
 
 \subsubsection{Điểm mở rộng}

@@ -7,7 +7,7 @@ Người dùng đăng nhập (Người dùng bao gồm admin, bác sĩ, nhân vi
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
   \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
-  \item Người dùng nhập thông tin bắt buộc vào các trường ``tên đăng nhập'' và ``mật khẩu'' rồi nhấn nút ``Đăng nhập''.
+  \item Người dùng nhập thông tin bắt buộc vào các trường ``Email'' và ``Password'' rồi nhấn nút ``Login''.
   \item Hệ thống kiểm tra thông tin, nếu thông tin hợp lệ thì chuyển đến trang chính của ứng dụng theo phân quyền tài khoản.
 \end{enumerate}
 
@@ -19,7 +19,7 @@ Người dùng đăng nhập (Người dùng bao gồm admin, bác sĩ, nhân vi
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Thông tin đăng nhập phải là kí tự trong bảng mã ASCII.
+  \item Thông tin đăng nhập phải là kí tự Unicode.
   \item Mật khẩu phải có ít nhất 6 kí tự.
   \item Người dùng đăng nhập bằng loại tài khoản nào thì sẽ được chuyển đến trang chính của ứng dụng theo phân quyền tài khoản đó.
   \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
@@ -29,13 +29,13 @@ Người dùng đăng nhập (Người dùng bao gồm admin, bác sĩ, nhân vi
     \end{itemize}
   \item Yêu cầu đăng nhập:
     \begin{itemize}
-      \item Điền đúng kí tự trong bảng mã ASCII cho các trường.
+      \item Điền đúng kí tự Unicode cho các trường.
       \item Điền đầy đủ thông tin bắt buộc.
     \end{itemize}
   \item Xảy ra lỗi nếu:
     \begin{itemize}
       \item Nhập thiếu các trường thông tin bắt buộc.
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập không đúng kí tự Unicode.
     \end{itemize}
 \end{itemize}
 

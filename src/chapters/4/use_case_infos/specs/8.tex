@@ -7,24 +7,20 @@ Người dùng gửi tin nhắn (Người dùng bao gồm bác sĩ và bệnh nh
 \paragraph{\textbf{Dòng sự kiện chính:}}
 \begin{enumerate}
   \item Người dùng đang ở giao diện soạn thảo tin nhắn với tin nhắn đã soạn.
-  \item Người dùng nhấn nút ``Gửi''.
-  \item Hệ thống kiểm tra, nếu hợp lệ thì gửi tin nhắn đến người nhận và hiển thị thông báo đã gửi.
+  \item Người dùng nhấn nút ``Send''.
+  \item Hệ thống kiểm tra, nếu hợp lệ thì gửi tin nhắn đến người nhận và hiển thị tình trạng xem của tin nhắn vừa gửi (``Not seen'', ``Seen'').
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác:}}
-Nếu người dùng không nhập tin nhắn hoặc nhập tin nhắn không hợp lệ mà nhấn nút ``Gửi'', hệ thống không gửi tin nhắn.
+  \begin{itemize}
+    \item Nếu người dùng không nhập tin nhắn mà nhấn nút ``Gửi'', hệ thống không gửi tin nhắn.
+    \item Nếu người dụng nhấn vào tin nhắn bất kì do mỉnh gửi, hệ thống hiển thị trạng thái xem của tin nhắn đó.
+  \end{itemize}
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Tin nhắn phải là kí tự trong bảng mã ASCII.
   \item Nội dung tin nhắn không được để trống.
-  \item Tin nhắn không được vượt quá 500 kí tự.
-  \item Xảy ra lỗi nếu:
-    \begin{itemize}
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
-      \item Không nhập nội dung tin nhắn.
-      \item Nhập nội dung tin nhắn vượt quá 500 kí tự.
-    \end{itemize}
+  \item Xảy ra lỗi nếu: Không nhập nội dung tin nhắn.
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}

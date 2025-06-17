@@ -1,39 +1,43 @@
-\subsection{Đặc tả Use Case ``Cập nhật lịch hẹn''}
+\subsection{Đặc tả Use Case ``Tra cứu nhân viên''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân cập nhật lịch hẹn.
+Admin tra cứu nhân viên.
 
 \subsubsection{Dòng sự kiện}
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
-  \item Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
-  \item Bệnh nhân nhấn nút ``Cập nhật'', hệ thống chuyển sang giao diện cập nhật lịch hẹn.
-  \item Bệnh nhân nhập các thông tin lịch hẹn cần cập nhật.
-  \item Hệ thống kiểm tra và ghi nhận.
-  \item Hệ thổng thông báo thành công và quay về giao diện xem chi tiết lịch hẹn.
+  \item Admin đang ở giao diện chính của hệ thống.
+  \item Admin nhấn nút ``Staffs'', hệ thống hiển thị giao diện quản lí nhân viên.
+  \item Admin nhập thông tin tìm kiếm nhân viên vào thanh tìm kiếm.
+  \item Admin nhấn nút tìm kiếm, hệ thống kiểm tra thông tin tìm kiếm và hiển thị kết quả.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
-\begin{enumerate}
-  \item Nếu bệnh nhân nhấn nút ``Hủy'', hệ thống quay về giao diện xem chi tiết đơn thuốc.
-  \item Nếu bệnh nhân nhập thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu nhập lại.
-\end{enumerate}
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Thông tin nhập vào là ngày tháng năm trong tương lai gần.
-  \item Lịch hẹn mới không được trùng với lịch hẹn đã có trong hệ thống.
-  \item Các thông tin có thể cập nhật bao gồm: Ngày hẹn.
-  \item Xảy ra lỗi nếu: Lịch hẹn đã có trong hệ thống.
+  \item Thông tin tìm kiếm phải đúng kiểu dữ liệu.
+  \item Các thông tin tìm kiếm bao gồm:
+    \begin{itemize}
+      \item Họ và tên.
+      \item Giới tính.
+      \item Khoa.
+    \end{itemize}
+  \item Xảy ra lỗi nếu:
+    \begin{itemize}
+      \item Thông tin tìm kiếm không đúng kiểu dữ liệu.
+      \item Không tìm thấy nhân viên khớp với thông tin tìm kiếm.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Bệnh nhân đang ở giao diện xem chi tiết lịch hẹn.
+Admin đang ở giao diện chính của hệ thống.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
 \begin{itemize}
-  \item Thực hiện thành công: Hệ thống cập nhật thông tin lịch hẹn và quay về giao diện xem chi tiết lịch hẹn.
-  \item Thực hiện không thành công: Thông báo.
+  \item Thực hiện thành công: Hệ thống hiển thị kết quả tìm kiếm.
+  \item Thực hiện không thành công: Hệ thống hiển thị kết quả rỗng.
 \end{itemize}
 
 \subsubsection{Điểm mở rộng}

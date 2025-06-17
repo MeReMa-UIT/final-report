@@ -7,20 +7,20 @@ Người dùng quên mật khẩu (Người dùng bao gồm admin, bác sĩ, nh�
 \paragraph{\textbf{Dòng sự kiện chính}}
 \begin{enumerate}
   \item Khởi động ứng dụng, hệ thống hiển thị màn hình đăng nhập.
-  \item Người dùng nhấn nút ``Quên mật khẩu?'', hệ thống chuyển đến giao diện quên mật khẩu.
-  \item Người dùng nhập ``tên đăng nhập'' và nhấn nút ``Tiếp theo''.
+  \item Người dùng nhấn nút ``Forgot password?'', hệ thống chuyển đến giao diện quên mật khẩu.
+  \item Người dùng nhập ``Email'', ``Citizen Id'' và nhấn nút ``Next''.
   \item Hệ thống kiểm tra thông tin, nếu hợp lệ, hệ thống gửi mã xác minh đến địa chỉ email và chuyển đến giao diện nhập mã xác minh.
-  \item Người dùng nhập mã xác minh và nhấn nút ``Tiếp theo''.
+  \item Người dùng nhập mã xác minh và nhấn nút ``Next''.
   \item Hệ thống kiểm tra mã xác minh, nếu hợp lệ, hệ thống chuyển đến giao diện nhập mật khẩu mới.
-  \item Người dùng nhập mật khẩu mới, nhập lại mật khẩu mới và nhấn nút ``Đặt lại mật khẩu''.
-  \item Hệ thống kiểm tra mật khẩu mới, nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản và thông báo ``Đặt lại mật khẩu thành công''.
+  \item Người dùng nhập mật khẩu mới, nhập lại mật khẩu mới và nhấn nút ``Reset password''.
+  \item Hệ thống kiểm tra mật khẩu mới, nếu hợp lệ, hệ thống cập nhật mật khẩu mới cho tài khoản và thông báo.
   \item Hệ thống chuyển về giao diện đăng nhập.
 \end{enumerate}
 
 \paragraph{\textbf{Các dòng sự kiện khác}}
 \begin{enumerate}
-  \item Nếu tên đăng nhập không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
-  \item Nếu người dùng nhấn núi ``Gửi lại'', hệ thống sẽ gửi lại mã xác minh với thời gian chờ 30 giây.
+  \item Nếu các trường thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+  \item Nếu người dùng nhấn núi ``Resend'', hệ thống sẽ gửi lại mã xác minh với thời gian chờ 30 giây.
   \item Nếu người dùng không nhập mã xác minh hoặc mã xác minh không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
   \item Nếu người dùng không nhập mật khẩu mới hoặc mật khẩu mới không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
   \item Nếu người dùng không nhập lại mật khẩu mới hoặc nhập lại mật khẩu mới không khớp, hệ thống thông báo lỗi và yêu cầu nhập lại.
@@ -29,8 +29,8 @@ Người dùng quên mật khẩu (Người dùng bao gồm admin, bác sĩ, nh�
 
 \subsubsection{Các yêu cầu đặc biệt}
 \begin{itemize}
-  \item Thông tin nhập vào phải là kí tự trong bảng mã ASCII.
-  \item Mật khẩu mới phải có ít nhất 6 kí tự và không được trùng với mật khẩu cũ.
+  \item Thông tin nhập vào phải là kí tự Unicode.
+  \item Mật khẩu mới phải có ít nhất 6 kí tự.
   \item Yêu cầu về việc thông báo lỗi nhập sai dữ liệu:
     \begin{itemize}
       \item Màn hình hiển thị thông báo lỗi.
@@ -39,7 +39,7 @@ Người dùng quên mật khẩu (Người dùng bao gồm admin, bác sĩ, nh�
   \item Xảy ra lỗi nếu:
     \begin{itemize}
       \item Nhập thiếu các trường thông tin bắt buộc.
-      \item Nhập không đúng kí tự trong bảng mã ASCII.
+      \item Nhập không đúng kí tự Unicode.
     \end{itemize}
 \end{itemize}
 

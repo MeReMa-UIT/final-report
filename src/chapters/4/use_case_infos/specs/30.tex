@@ -1,36 +1,22 @@
-\subsection{Đặc tả Use Case ``Xem chi tiết thông tin lịch hẹn''}
+\subsection{Đặc tả Use Case ``Phân quyền nhân viên''}
 
 \subsubsection{Tóm tắt}
-Bệnh nhân xem chi tiết thông tin lịch hẹn.
+Admin phân quyền cho nhân viên.
 
 \subsubsection{Dòng sự kiện}
-\paragraph{\textbf{Dòng sự kiện chính}}
-\begin{enumerate}
-  \item Bệnh nhân đang ở giao diện xem danh sách lịch hẹn.
-  \item Bệnh nhân tra cứu và chọn lịch hẹn trong danh sách, hệ thống hiển thị thông tin chi tiết lịch hẹn.
-\end{enumerate}
+\paragraph{\textbf{Dòng sự kiện chính:}}
+Khi thêm nhân viên, admin có thể phân quyền cho nhân viên qua trường ``Chức danh''.
 
-\paragraph{\textbf{Các dòng sự kiện khác}}
-Xem use case ``Tra cứu lịch hẹn''.
+\paragraph{\textbf{Các dòng sự kiện khác:}}
+Không có.
 
 \subsubsection{Các yêu cầu đặc biệt}
-\begin{itemize}
-  \item Các thông tin bao gồm:
-    \begin{itemize}
-      \item Số thứ tự.
-      \item Ngày hẹn.
-      \item Giờ hẹn dự kiến.
-      \item Trạng thái.
-    \end{itemize}
-\end{itemize}
+Admin phải phân quyền phù hợp với nhân viên.
 
 \subsubsection{Trạng thái hệ thống khi bắt đầu thực hiện Use Case}
-Bệnh nhân đang ở giao diện xem danh sách lịch hẹn.
+Admin đang thêm thông tin nhân viên.
 
 \subsubsection{Trạng thái hệ thống sau khi thực hiện Use Case}
-\begin{itemize}
-  \item Thực hiện thành công: Hệ thống hiển thị thông tin chi tiết lịch hẹn.
-  \item Thực hiện không thành công: Thông báo.
-\end{itemize}
+Admin đã thêm thông tin nhân viên cùng với phân quyền phù hợp.
 
 \subsubsection{Điểm mở rộng}
