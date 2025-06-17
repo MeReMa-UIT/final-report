@@ -1,104 +1,49 @@
 \section{Quản lí hồ sơ bệnh án}
 
-Nhóm chức năng ``Quản lí hồ sơ bệnh án'' là nhóm chức năng chính của hệ thống, với vai trò đặc biệt quan trọng. Nhóm chức năng gồm các chức năng sau:
+Nhóm chức năng ``Quản lí hồ sơ bệnh án" là nhóm chức năng chính của hệ thống, với vai trò đặc biệt quan trọng trong việc quản lí hồ sơ bệnh án của bệnh nhân trong quá thăm khám chữa bệnh tại cơ sở y tế. Nhóm chức năng gồm các chức năng sau:
 \begin{itemize}
   \item Thêm hồ sơ bệnh án
   \item Cập nhật hồ sơ bệnh án
   \item Tra cứu hồ sơ bệnh án
-  \item Xóa hồ sơ bệnh án
 \end{itemize}
+
+Những nhóm tính năng quan trọng khác được xây dựng phụ thuộc nhóm chức năng này, bởi vì nó là cốt lõi trong quy trình nghiệp vụ của các cơ sở y tế. Thế nên việc xây dựng các tính năng này là rất quan trọng, đảm bảo cho việc quản lí hồ sơ bệnh án của bệnh nhân được thực hiện một cách hiệu quả và chính xác để cá hệ thống hoạt động trơn tru.
 
 \subsection{Thêm hồ sơ bệnh án}
 
 \noindent \textbf{Giới thiệu tính năng}
 
-Tính năng ``Thêm hồ sơ bệnh án'' cho phép người dùng thêm hồ sơ bệnh án từ bệnh án có sẵn hoặc tạo bệnh án mới.
-
-\noindent \textbf{Quy trình}
-\begin{itemize}
-  \item Người dùng đăng nhập vào hệ thống.
-  \item Người dùng truy cập vào giao diện ``Thêm hồ sơ bệnh án''.
-  \item Người dùng chọn thêm từ bệnh án có sẵn hoặc nhập bệnh án mới.
-  \item Người dùng nhập các thông tin bệnh án.
-    \begin{itemize}
-      \item Nếu thêm thành công: Lưu trữ hồ sơ bệnh án vào hệ thống.
-      \item Nếu thêm không thành công: Yêu cầu sửa / nhập lại.
-    \end{itemize}
-\end{itemize}
+Tính năng này cho phép bác sĩ lập nên một bệnh án mới mỗi khi có bệnh nhân đến thăm khám. Bệnh án sau đó sẽ được lưu trữ trong hệ thống để phục vụ cho việc theo dõi và quản lí bệnh nhân trong suốt quá trình khám chữa bệnh.
 
 \noindent \textbf{Các yêu cầu chức năng}
 \begin{itemize}
-  \item \textbf{REQ\_01} Hồ sơ bệnh án phải gắn với bệnh nhân hợp lệ trong hệ thống.
+  \item \textbf{REQ\_01} Hồ sơ bệnh án được tạo phải gắn với một bệnh nhân hợp lệ đã được lưu trong hệ thống.
+  \item \textbf{REQ\_02} Hệ thống phải hỗ trợ bác sĩ trong việc nhập liệu để dữ liệu được đồng bộ với toàn bộ hệ thống.
+  \item \textbf{REQ\_03} Hệ thống phải kiểm tra tính hợp lệ của một số trường quan trọng trước khi lưu vào cơ sở dữ liệu.
+  \item \textbf{REQ\_04} Hệ thống lưu trữ được cả những file đính kèm với bệnh án để phục vụ cho các chẩn đoán và theo dõi của bác sĩ trong quá trình làm bệnh án.
 \end{itemize}
 
 \subsection{Cập nhật hồ sơ bệnh án}
 
 \noindent \textbf{Giới thiệu tính năng}
 
-Tính năng ``Cập nhật hồ sơ bệnh án'' cho phép người dùng cập nhật thông tin bệnh, thay đổi chẩn đoán,...
-
-\noindent \textbf{Quy trình}
-\begin{itemize}
-  \item Người dùng đăng nhập vào hệ thống.
-  \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bênh án''
-  \item Người dùng tìm bệnh án cần cập nhật.
-  \item Người dùng lựa chọn ``Cập nhật hồ sơ bệnh án'' và cập nhật các thông tin cần thiết.
-    \begin{itemize}
-      \item Nếu thành công: Lưu trữ bệnh án đã cập nhật vào hệ thống.
-      \item Nếu không thành công: Yêu cầu sửa / nhập lại.
-    \end{itemize}
-\end{itemize}
+Tính năng này cho phép bác sĩ cập nhật thông tin về bệnh án của bệnh nhân trong quá trình thăm khám và điều trị. Việc cập nhật này có thể bao gồm việc thêm thông tin mới, chỉnh sửa thông tin đã có hoặc xóa thông tin không còn cần thiết.
 
 \noindent \textbf{Các yêu cầu chức năng}
 \begin{itemize}
-  \item \textbf{REQ\_01} Các thông tin được cập nhật phải hợp lệ.
-  \item \textbf{REQ\_02} Hệ thống phải lưu lại đầy đủ lịch sử thay đổi của bệnh án.
+  \item \textbf{REQ\_01} Hệ thống phải hỗ trợ bác sĩ trong việc nhập liệu để dữ liệu được đồng bộ với toàn bộ hệ thống.
+  \item \textbf{REQ\_02} Hệ thống phải kiểm tra tính hợp lệ của một số trường quan trọng trước khi lưu vào cơ sở dữ liệu.
+  \item \textbf{REQ\_03} Các file đính kèm phải được cập nhật về số lượng để đảm bảo sự đồng bộ giữa bệnh án và bộ phận lưu trữ.
 \end{itemize}
 
 \subsection{Tra cứu hồ sơ bệnh án}
 
 \noindent \textbf{Giới thiệu tính năng}
 
-Tính năng ``Tra cứu hồ sơ bệnh án'' cho phép người dùng thực hiện việc tìm kiếm hồ sơ bệnh án nhanh chóng và chính xác.
-
-\noindent \textbf{Quy trình}
-\begin{itemize}
-  \item Người dùng đăng nhập vào hệ thống.
-  \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bệnh án''.
-  \item Người dùng nhập các tiêu chí tìm kiếm như ``Tên bệnh nhân'',...
-    \begin{itemize}
-      \item Nếu tìm thấy: Hiển thị danh sách bệnh án đã tìm thấy.
-      \item Nếu không tìm thấy: Hiển thị ``Không tìm thấy''.
-    \end{itemize}
-\end{itemize}
+Tính năng này cho phép bác sĩ thực hiện việc tìm kiếm hồ sơ bệnh án đã được lưu vào hệ thống một đầy đủ và chính xác.
 
 \noindent \textbf{Các yêu cầu chức năng}
 \begin{itemize}
-  \item \textbf{REQ\_01} Hệ thống phải thực hiện việc tìm kiếm nhanh chóng và chính xác.
-  \item \textbf{REQ\_02} Hệ thống phải tuân thủ phân quyền khi thực hiện tìm kiếm.
-\end{itemize}
-
-\subsection{Xóa hồ sơ bệnh án}
-
-\noindent \textbf{Giới thiệu tính năng}
-
-Tính năng ``Xóa hồ sơ bệnh án'' cho phép người dùng thực hiện thao tác xóa các bệnh án khi vô tình trùng lặp hoặc bệnh án giả lập,...
-
-\noindent \textbf{Quy trình}
-\begin{itemize}
-  \item Người dùng đăng nhập vào hệ thống.
-  \item Người dùng truy cập vào giao diện ``Tra cứu hồ sơ bệnh án''.
-  \item Người dùng tìm bệnh án cần xóa.
-  \item Người dùng lựa chọn xóa đơn thuốc.
-  \item Hệ thống hiển thị cảnh báo xác nhận trước khi xóa.
-    \begin{itemize}
-      \item Nếu thành công: Hệ thống cập nhật trạng thái bệnh án thành ``Đã xóa''.
-      \item Nếu không thành công: Hệ thống hiển thị ``Xóa không thành công''.
-    \end{itemize}
-\end{itemize}
-
-\noindent \textbf{Các yêu cầu chức năng}
-\begin{itemize}
-  \item \textbf{REQ\_01} Hệ thống phải yêu cầu xác nhận lại trước khi xóa.
-  \item \textbf{RER\_02} Hệ thống phải lưu trữ bệnh án đã xóa với trạng thái ``Đã xóa'' và không được thực xóa bệnh án khỏi hệ thống.
+  \item \textbf{REQ\_01} Hệ thống phải hiển thị danh sách đầy đủ của tất cả bệnh án đã được lưu vào hệ thống.
+  \item \textbf{REQ\_02} Hệ thống phải cho phép xem chi tiết thông tin đầy đủ của một bệnh án được chọn.
 \end{itemize}
