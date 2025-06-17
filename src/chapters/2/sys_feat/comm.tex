@@ -1,0 +1,49 @@
+\section{Liên lạc và trao đổi thông tin}
+
+Nhóm tính năng ``Liên lạc và trao đổi thông tin" cho phép bác sĩ làm bệnh án và bệnh nhân có thể gửi và nhận thông tin một cách thuận tiện, an toàn và hiệu quả. Tính năng này đóng vai trò là cầu nối giúp đảm bảo việc theo dõi, cập nhật tình trạng điều trị, đặt câu hỏi và phản hồi diễn ra thông suốt trong quá trình chăm sóc sức khỏe.
+
+Nhóm tính năng này bao gồm các tính năng chính như sau:
+\begin{itemize}
+  \item Soạn thảo và gửi tin nhắn
+  \item Nhận tin nhắn
+  \item Lưu trữ tin nhắn
+\end{itemize}
+
+\subsection{Soạn thảo và gửi tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng (bệnh nhân hoặc bác sĩ) tạo nội dung tin nhắn để gửi cho bên còn lại, phục vụ cho mục đích trao đổi thông tin y tế giữa đôi bên. Tin nhắn có thể là văn bản liên quan đến tình trạng sức khỏe, tư vấn hoặc trao đổi hành chính, cũng có thể là tệp đính kèm.
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+  \item \textbf{REQ\_01}: Hệ thống phải cho phép chọn người nhận từ danh sách liên hệ hoặc qua tìm kiếm. Danh sách liên hệ được xác định thông qua các bệnh án còn thời hạn.
+  \item \textbf{REQ\_02}: Hệ thống chỉ cho phép bệnh nhân gửi tin nhắn đến bác sĩ trong thời gian hiệu lực. Sau khi hết thời gian hiệu lực, bệnh nhân không thể gửi tin nhắn đến bác sĩ.
+\end{itemize}
+
+\subsection{Nhận tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép người dùng nhận tin nhắn từ bên gửi và hiển thị thông báo để nhắc nhở người dùng xem tin nhắn đến. Tin nhắn có thể là văn bản liên quan đến tình trạng sức khỏe, tư vấn hoặc trao đổi hành chính, cũng có thể là tệp đính kèm.
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+  \item \textbf{REQ\_01}: Hệ thống phải đảm bảo rằng tin nhắn được gửi đến người nhận thành công.
+  \item \textbf{REQ\_02}: Hệ thống phải thông báo ngay cho người nhận về tin nhắn mới.
+\end{itemize}
+
+\subsection{Lưu trữ tin nhắn}
+
+\noindent \textbf{Giới thiệu tính năng}
+
+Tính năng này cho phép hệ thống lưu trữ tin nhắn đã gửi và nhận giữa người dùng. Tin nhắn được lưu trữ trong cơ sở dữ liệu trong một khoảng thời gian nhất định trước để người dùng có thể xem lại sau này.
+
+\noindent \textbf{Các yêu cầu chức năng}
+
+\begin{itemize}
+  \item \textbf{REQ\_01}: Hệ thống phải lưu trữ cuộc hội thoại trong khoảng thời gian ít nhất là 90 ngày kể từ tin nhắn cuối cùng.
+  \item \textbf{REQ\_02}: Hệ thống phải cho phép người dùng xem lại tin nhắn đã gửi và nhận trong khoảng thời gian lưu trữ.
+\end{itemize}
