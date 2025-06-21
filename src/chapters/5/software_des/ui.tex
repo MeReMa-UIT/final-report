@@ -1,1 +1,311 @@
 \section{Thiết kế giao diện}
+
+\subsection{Danh sách các màn hình}
+\begin{longtable}{|c|p{0.2\textwidth\centering}|p{0.2\textwidth\centering}|p{0.3\textwidth\centering}|}
+    \hline
+    \textbf{STT} & \textbf{Màn hình} & \textbf{Loại màn hình} & \textbf{Chức năng} \cr
+    \hline
+    1 & Màn hình Đăng nhập & Màn hình nhập liệu & Cho phép người dùng nhập thông tin đăng nhập để truy cập hệ thống \cr
+    \hline
+    2 & Màn hình Quên mật khẩu & Màn hình nhập liệu & Cho phép người dùng nhập thông tin để lấy lại mật khẩu \cr
+    \hline
+    3 & Màn hình Mã xác minh & Màn hình nhập liệu & Cho phép người dùng nhập mã xác minh được gửi đến email \cr
+    \hline
+    4 & Màn hình Đặt lại mật khẩu & Màn hình nhập liệu & Cho phép người dùng đặt lại mật khẩu mới \cr
+    \hline
+    5 & Màn hình Chính & Màn hình chính & Cho phép người dùng chọn các chức năng khác nhau của hệ thống \cr
+    \hline
+    6 & Màn hình Xem thông tin tài khoản & Màn hình tra cứu & Hiển thị thông tin tài khoản của người dùng \cr
+    \hline
+    7 & Màn hình Cập nhật thông tin tài khoản & Màn hình nhập liệu & Cho phép người dùng cập nhật thông tin tài khoản của mình \cr
+    \hline
+    8 & Màn hình Quản lí bệnh nhân & Màn hình tra cứu & Hiển thị danh sách bệnh nhân, bệnh án và thuốc của bệnh nhân đó \cr
+    \hline 
+    9 & Màn hình Thêm bệnh nhân & Màn hình nhập liệu & Cho phép người dùng thêm bệnh nhân mới vào hệ thống \cr
+    \hline 
+    10 & Màn hình Cập nhật thông tin bệnh nhân & Màn hình nhập liệu & Cho phép người dùng cập nhật thông tin bệnh nhân \cr
+    \hline
+    11 & Màn hình Thêm bệnh án & Màn hình nhập liệu & Cho phép người dùng thêm bệnh án cho bệnh nhân \cr
+    \hline
+    12 & Màn hình Xem danh sách bệnh án & Màn hình tra cứu & Hiển thị danh sách bệnh án của bệnh nhân \cr
+    \hline
+    13 & Màn hình Xem chi tiết bệnh án & Màn hình tra cứu & Hiển thị chi tiết bệnh án của bệnh nhân \cr
+    \hline
+    14 & Màn hình Cập nhật bệnh án & Màn hình nhập liệu & Cho phép người dùng cập nhật thông tin bệnh án \cr
+    \hline 
+    15 & Màn hình Thêm đơn thuốc & Màn hình nhập liệu & Cho phép người dùng thêm đơn thuốc cho bệnh nhân \cr
+    \hline 
+    16 & Màn hình Xem danh sách đơn thuốc & Màn hình tra cứu & Hiển thị danh sách đơn thuốc của bệnh nhân \cr
+    \hline
+    17 & Màn hình Xem chi tiết đơn thuốc & Màn hình tra cứu & Hiển thị chi tiết đơn thuốc của bệnh nhân \cr
+    \hline
+    18 & Màn hình Cập nhật đơn thuốc & Màn hình nhập liệu & Cho phép người dùng cập nhật thông tin đơn thuốc \cr
+    \hline
+    19 & Màn hình Nhắn tin & Màn hình nhập liệu & Cho phép người dùng gửi và nhận tin nhắn \cr
+    \hline 
+    20 & Màn hình Quản lí lịch hẹn & Màn hình tra cứu & Hiển thị danh sách lịch hẹn của bệnh nhân \cr
+    \hline 
+    21 & Màn hình Thêm lịch hẹn & Màn hình nhập liệu & Cho phép người dùng tạo lịch hẹn \cr
+    \hline 
+    22 & Màn hình Quản lí nhân viên & Màn hình tra cứu & Hiển thị danh sách nhân viên trong hệ thống \cr
+    \hline 
+    23 & Màn hình Thêm nhân viên & Màn hình nhập liệu & Cho phép người dùng thêm nhân viên mới vào hệ thống \cr
+    \hline
+    24 & Màn hình Cập nhật thông tin nhân viên & Màn hình nhập liệu & Cho phép người dùng cập nhật thông tin nhân viên \cr
+    \hline 
+    25 & Màn hình Thống kê & Màn hình tra cứu & Hiển thị các thống kê theo thời gian \cr
+    \hline
+    26 & Màn hình xem danh sách tệp đính kèm & Màn hình tra cứu & Hiển thị danh sách các tệp đính kèm của bệnh án \cr
+    \hline
+    27 & Màn hình Thêm tệp đính kèm & Màn hình nhập liệu & Cho phép người dùng thêm tệp đính kèm vào bệnh án \cr
+    \hline
+    28 & Màn hình xem ảnh từ tệp đính kèm & Màn hình tra cứu & Hiển thị ảnh từ tệp đính kèm của bệnh án \cr
+    \hline
+\end{longtable}
+
+\subsection{Thiết kế các màn hình}
+
+\subsubsection{Màn hình Đăng nhập}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/1.png}
+    \caption{Màn hình Đăng nhập}
+    \label{fig:screen1}
+\end{figure}
+
+\subsubsection{Màn hình Quên mật khẩu}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/2.png}
+    \caption{Màn hình Quên mật khẩu}
+    \label{fig:screen2}
+\end{figure}
+
+\subsubsection{Màn hình Mã xác minh}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/3.png}
+    \caption{Màn hình Mã xác minh}
+    \label{fig:screen3}
+\end{figure}
+
+\subsubsection{Màn hình Đặt lại mật khẩu}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/4.png}
+    \caption{Màn hình Đặt lại mật khẩu}
+    \label{fig:screen4}
+\end{figure}
+
+\subsubsection{Màn hình Chính}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/5_admin.png}
+    \caption{Màn hình Chính - Quản trị viên}
+    \label{fig:screen5_admin}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/5_doctor.png}
+    \caption{Màn hình Chính - Bác sĩ}
+    \label{fig:screen5_doctor}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/5_patient.png}
+    \caption{Màn hình Chính - Bệnh nhân}
+    \label{fig:screen5_patient}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/5_recep.png}
+    \caption{Màn hình Chính - Nhân viên tiếp nhận}
+    \label{fig:screen5_recep}
+\end{figure}
+
+\subsubsection{Màn hình Xem thông tin tài khoản}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/6_patient.png}
+    \caption{Màn hình Xem thông tin tài khoản}
+    \label{fig:screen6}
+\end{figure}
+
+\subsubsection{Màn hình Cập nhật thông tin tài khoản}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/7.png}
+    \caption{Màn hình Cập nhật thông tin tài khoản}
+    \label{fig:screen7}
+\end{figure}
+
+\subsubsection{Màn hình Quản lí bệnh nhân}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/8.png}
+    \caption{Màn hình Quản lí bệnh nhân}
+    \label{fig:screen8}
+\end{figure}
+
+\subsubsection{Màn hình Thêm bệnh nhân}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/9.png}
+    \caption{Màn hình Thêm bệnh nhân}
+    \label{fig:screen9}
+\end{figure}
+
+\subsubsection{Màn hình Cập nhật thông tin bệnh nhân}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/10.png}
+    \caption{Màn hình Cập nhật thông tin bệnh nhân}
+    \label{fig:screen10}
+\end{figure}
+
+\subsubsection{Màn hình Thêm bệnh án}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/11.png}
+    \caption{Màn hình Thêm bệnh án}
+    \label{fig:screen11}
+\end{figure}
+
+\subsubsection{Màn hình Xem danh sách bệnh án}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/12.png}
+    \caption{Màn hình Xem danh sách bệnh án}
+    \label{fig:screen12}
+\end{figure}
+
+\subsubsection{Màn hình Xem chi tiết bệnh án}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/13.png}
+    \caption{Màn hình Xem chi tiết bệnh án}
+    \label{fig:screen13}
+\end{figure}
+
+\subsubsection{Màn hình Cập nhật bệnh án}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/14.png}
+    \caption{Màn hình Cập nhật bệnh án}
+    \label{fig:screen14}
+\end{figure}
+
+\subsubsection{Màn hình Thêm đơn thuốc}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/15.png}
+    \caption{Màn hình Thêm đơn thuốc}
+    \label{fig:screen15}
+\end{figure}
+
+\subsubsection{Màn hình Xem danh sách đơn thuốc}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/16.png}
+    \caption{Màn hình Xem danh sách đơn thuốc}
+    \label{fig:screen16}
+\end{figure}
+
+\subsubsection{Màn hình Xem chi tiết đơn thuốc}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/17.png}
+    \caption{Màn hình Xem chi tiết đơn thuốc}
+    \label{fig:screen17}
+\end{figure}
+
+\subsubsection{Màn hình Cập nhật đơn thuốc}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/18.png}
+    \caption{Màn hình Cập nhật đơn thuốc}
+    \label{fig:screen18}
+\end{figure}
+
+\subsubsection{Màn hình Nhắn tin}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/19.png}
+    \caption{Màn hình Nhắn tin}
+    \label{fig:screen19}
+\end{figure}
+
+\subsubsection{Màn hình Quản lí lịch hẹn}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/20.png}
+    \caption{Màn hình Quản lí lịch hẹn}
+    \label{fig:screen20}
+\end{figure}
+
+\subsubsection{Màn hình Thêm lịch hẹn}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/21.png}
+    \caption{Màn hình Thêm lịch hẹn}
+    \label{fig:screen21}
+\end{figure}
+
+\subsubsection{Màn hình Quản lí nhân viên}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/22.png}
+    \caption{Màn hình Quản lí nhân viên}
+    \label{fig:screen22}
+\end{figure}
+
+\subsubsection{Màn hình Thêm nhân viên}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/23.png}
+    \caption{Màn hình Thêm nhân viên}
+    \label{fig:screen23}
+\end{figure}
+
+\subsubsection{Màn hình Cập nhật thông tin nhân viên}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/24.png}
+    \caption{Màn hình Cập nhật thông tin nhân viên}
+    \label{fig:screen24}
+\end{figure}
+
+\subsubsection{Màn hình Thống kê}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/25.png}
+    \caption{Màn hình Thống kê}
+    \label{fig:screen25}
+\end{figure}
+
+\subsubsection{Màn hình xem danh sách tệp đính kèm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/26.png}
+    \caption{Màn hình xem danh sách tệp đính kèm}
+    \label{fig:screen26}
+\end{figure}
+
+\subsubsection{Màn hình Thêm tệp đính kèm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/27.png}
+    \caption{Màn hình Thêm tệp đính kèm}
+    \label{fig:screen27}
+\end{figure}
+
+\subsubsection{Màn hình xem ảnh từ tệp đính kèm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{src/figures/screens/28.png}
+    \caption{Màn hình xem ảnh từ tệp đính kèm}
+    \label{fig:screen28}
+\end{figure}
